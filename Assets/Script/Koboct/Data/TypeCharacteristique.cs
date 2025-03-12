@@ -2,6 +2,7 @@
 {
     public enum TypeCharacteristique
     {
+        Aucune=0,
         Force=1,
         Dexterite= 2,
         Constitution=3,

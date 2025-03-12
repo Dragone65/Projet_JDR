@@ -7,8 +7,8 @@ namespace Koboct.Data
     public class Characteristique
     {
         [SerializeField] private TypeCharacteristique _monType;
-        [SerializeField] private int _valeur;
-        [SerializeField] private int _modificateur;
+        [Range(0, 21)] [SerializeField] private int _valeur;
+        [Range(-4, 5)] [SerializeField] private int _modificateur;
 
         public TypeCharacteristique MonType
         {
@@ -61,6 +61,9 @@ namespace Koboct.Data
                     return 3;
                 case 18:
                 case 19:
+                    return 4;
+                case 20:
+                case 21:
                     return 5;
             }
 
