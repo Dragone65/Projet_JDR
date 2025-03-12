@@ -1,0 +1,70 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bf72a469fe07ce4449570a9a84c76bb1, type: 3}
+  m_Name: MonPersonnage
+  m_EditorClassIdentifier: 
+  _nom: 
+  _nomJoueur: Bilbo
+  _description: 
+  _sexe: 2
+  _taille: 0
+  _poids: 0
+  _age: 0
+  _characteristiques:
+  - _monType: 1
+    _valeur: 0
+    _modificateur: 0
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 2
+    _valeur: 0
+    _modificateur: 0
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 3
+    _valeur: 0
+    _modificateur: 0
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 4
+    _valeur: 0
+    _modificateur: 0
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 5
+    _valeur: 0
+    _modificateur: 0
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 6
+    _valeur: 0
+    _modificateur: 0
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  _race: {fileID: 0}
+  _profil: {fileID: 0}
+  _deDePointDeVie: 0
+  _pointDeVie: 0
+  _equipements: []
+  _bourse: 0
+  _pointDeDefense: 0
+  _modAttaqueContact: 0
+  _modAttaqueDistance: 0
+  _modAttaqueMagique: 0
+  _profilMagicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
+  _profilPretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}

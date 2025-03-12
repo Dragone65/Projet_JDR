@@ -6,5 +6,7 @@ namespace Koboct.Data
     public class Equipement : NamedScriptableObject
     {
         [SerializeField] private float _prix;
+        [SerializeField] private Sprite _icon;
+        [SerializeField] private GameObject _prefab;
     }
 }

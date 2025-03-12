@@ -7,6 +7,17 @@ namespace Koboct.Data
     [CreateAssetMenu(fileName = "Personnage", menuName = "Personnage", order = 0)]
     public class Personnage : ScriptableObject
     {
+        [SerializeField] private string _nom;
+        [SerializeField] private string _nomJoueur;
+        [TextArea(3, 10)]
+        [SerializeField] private string _description;
+        [SerializeField] private Genre _sexe;
+        [Range(0.5f, 2.5f)]
+        [SerializeField] private float _taille;
+        [Range(20, 150)]
+        [SerializeField] private float _poids;
+        [Range(20, 350)]
+        [SerializeField] private int _age;
         [SerializeField] private List<Characteristique> _characteristiques = new();
         [SerializeField] private Race _race;
         [SerializeField] private Profil _profil;
@@ -26,7 +37,7 @@ namespace Koboct.Data
             Reset();
         }
 
-        private void Reset()
+        public void Reset()
         {
             _characteristiques.Clear();
             _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Force });
@@ -42,8 +53,22 @@ namespace Koboct.Data
             _equipements.Clear();
             _bourse = 0;
             _pointDeDefense = 0;
+            _nom=string.Empty;
+            _nomJoueur=string.Empty;
+            _description=string.Empty;
+            _sexe=Genre.Neutre;
+            _taille=0;
+            _poids=0;
+            _age=0;
+            _modAttaqueDistance=0;
+            _modAttaqueContact=0;
+            _modAttaqueMagique=0;
         }
 
+        public string NomJoueur
+        {
+            set => _nomJoueur = value;
+        }
         private int GetCharacteristiqueValeur(TypeCharacteristique type)
         {
             return GetCharacteristique(type).Valeur;
@@ -87,5 +112,21 @@ namespace Koboct.Data
             else
                 _modAttaqueMagique = 0;
         }
+
+        public void SetCharacterisicValue(TypeCharacteristique typeCharacteristique, int i)
+        {
+            var characteristic = _characteristiques.FirstOrDefault(car => car.MonType == typeCharacteristique);
+            if (characteristic != null)
+            {
+                characteristic.Valeur = i;
+            }
+        }
+    }
+
+    internal enum Genre
+    {
+        Masculin,
+        Feminin,
+        Neutre
     }
 }

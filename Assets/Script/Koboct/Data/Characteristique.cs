@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.Events;
 
 namespace Koboct.Data
 {
@@ -9,6 +10,7 @@ namespace Koboct.Data
         [SerializeField] private TypeCharacteristique _monType;
         [Range(0, 21)] [SerializeField] private int _valeur;
         [Range(-4, 5)] [SerializeField] private int _modificateur;
+        public UnityEvent<int> OnValeurChange = new();
 
         public TypeCharacteristique MonType
         {
@@ -18,6 +20,14 @@ namespace Koboct.Data
 
         public int Valeur
         {
+            set
+            {
+                if (_valeur == value) return;
+                OnValeurChange.Invoke(value);
+                _valeur = value;
+                _modificateur = CalculModificateur(_valeur);
+            }
+
             get => _valeur;
         }
 
@@ -25,14 +35,14 @@ namespace Koboct.Data
         {
             get
             {
-                _modificateur = CalculModificateur();
+                _modificateur = CalculModificateur(_valeur);
                 return _modificateur;
             }
         }
 
-        private int CalculModificateur()
+        public static int CalculModificateur(int val)
         {
-            switch (_valeur)
+            switch (val)
             {
                 case 1:
                 case 2:
