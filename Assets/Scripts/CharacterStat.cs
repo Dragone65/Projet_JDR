@@ -1,7 +1,7 @@
 using UnityEditor.PackageManager.UI;
 using UnityEngine;
 
-public class CharacterStats
+public class CharacterStats : MonoBehaviour
 {
     public int strength;
     public int dexterity;
@@ -18,5 +18,10 @@ public class CharacterStats
         intelligence = intel;
         wisdom = wis;
         charisma = cha;
+    }
+
+    public int GetModifier(int stat)
+    {
+        return (stat - 10) / 2; // Calcul du modificateur
     }
 }
