@@ -9,8 +9,8 @@ namespace Koboct.Data
         [SerializeField] private bool _distance;
         [SerializeField] private bool _uneMain;
         [SerializeField] private bool _deuxMains;
+        public TypeDeDe TypeDeDeDegats => _typeDeDeDegats;
 
-        
         [SerializeField] private TypeDeDe _typeDeDeDegats;
         [Range(1,5)]
         [SerializeField] private int _nbDeDeDegats;

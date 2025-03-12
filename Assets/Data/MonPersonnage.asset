@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: MonPersonnage
   m_EditorClassIdentifier: 
   _nom: 
-  _nomJoueur: Bilbo
+  _nomJoueur: 
   _description: 
   _sexe: 2
   _taille: 0

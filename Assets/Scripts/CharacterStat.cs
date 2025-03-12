@@ -1,27 +1,54 @@
-using UnityEditor.PackageManager.UI;
+using System.Collections.Generic;
 using UnityEngine;
 
-public class CharacterStats : MonoBehaviour
+namespace Koboct.Data
 {
-    public int strength;
-    public int dexterity;
-    public int constitution;
-    public int intelligence;
-    public int wisdom;
-    public int charisma;
-
-    public CharacterStats(int str, int dex, int con, int intel, int wis, int cha)
+    public class CharacterStats : MonoBehaviour
     {
-        strength = str;
-        dexterity = dex;
-        constitution = con;
-        intelligence = intel;
-        wisdom = wis;
-        charisma = cha;
-    }
+        [SerializeField] private List<Characteristique> _characteristiques = new();
+        [SerializeField] private List<Equipement> _inventaire = new();
+        [SerializeField] private Arme _armeEquipee;
+        [SerializeField] private Protection _armureEquipee;
 
-    public int GetModifier(int stat)
-    {
-        return (stat - 10) / 2; // Calcul du modificateur
+        public void AjouterEquipement(Equipement equipement)
+        {
+            _inventaire.Add(equipement);
+        }
+
+        public void EquiperArme(Arme arme)
+        {
+            _armeEquipee = arme;
+            Debug.Log($"Arme équipée : {arme.name}");
+        }
+
+        public void EquiperProtection(Protection protection)
+        {
+            _armureEquipee = protection;
+            Debug.Log($"Protection équipée : {protection.name}");
+        }
+
+        public Arme GetArmeEquipee()
+        {
+            return _armeEquipee;
+        }
+
+        public Protection GetProtectionEquipee()
+        {
+            return _armureEquipee;
+        }
+        public int GetValeur(TypeCharacteristique type)
+        {
+            return _characteristiques.Find(car => car.MonType == type)?.Valeur ?? 0;
+        }
+
+        public int GetModificateur(TypeCharacteristique type)
+        {
+            return _characteristiques.Find(car => car.MonType == type)?.Modificateur ?? 0;
+        }
+
+        public List<Equipement> GetInventaire()
+        {
+            return _inventaire;
+        }
     }
 }
