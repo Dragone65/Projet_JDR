@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Koboct.Data;
 using UnityEngine;
 
@@ -11,6 +12,9 @@ namespace Koboct.Services
 
         [SerializeField] private ServiceLancerDeDe _monServiceDeLanceDeDe;
         [SerializeField] private int[] _monResultatJetCharacteristique;
+
+        [SerializeField] private List<Race> _listRaceDisponible = new ();
+        [SerializeField] private List<Profil> _listProfilDisponible = new ();
 
         private void OnEnable()
         {
