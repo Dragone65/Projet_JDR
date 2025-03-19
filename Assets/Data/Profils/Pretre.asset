@@ -12,8 +12,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c75d5caf907c427c898a0cddad207b3b, type: 3}
   m_Name: Pretre
   m_EditorClassIdentifier: 
-  _nom: Magicien
+  _nom: Pretre
   _voies: []
   _deDePointDeVie: 0
-  _equimentsDeBase: []
+  _equimentsDeBase:
+  - {fileID: 11400000, guid: c2d9f0141648c4c4abbbb69203dbe343, type: 2}
   _argentDeDepart: 5

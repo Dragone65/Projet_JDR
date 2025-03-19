@@ -16,3 +16,7 @@ MonoBehaviour:
   _voies:
   - {fileID: 11400000, guid: 13d2ddeee51778343bf9d7e7264e8ff8, type: 2}
   _deDePointDeVie: 8
+  _equimentsDeBase:
+  - {fileID: 11400000, guid: f2bf8b898f3930c4abca55e6b4d20fee, type: 2}
+  - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
+  _argentDeDepart: 5
