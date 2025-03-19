@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using Koboct.Data;
@@ -13,21 +14,35 @@ public class DialogueManager : MonoBehaviour
     public Button choixPrefab;
     public GameObject dialoguePanel;
 
+    public event Action OnDialogueStart; // Événement pour désactiver les PNJ
+    public event Action OnDialogueEnd;   // Événement pour réactiver les PNJ
+
     private Dialogue dialogueActuel;
     private CharacterStats playerStats;
+    private bool peutQuitter = false;
 
     void Awake()
     {
         Instance = this;
-        dialoguePanel.SetActive(false); // Désactiver l'UI au début
+        dialoguePanel.SetActive(false);
     }
 
     public void CommencerDialogue(Dialogue dialogue, CharacterStats stats)
     {
+        if (dialoguePanel.activeSelf) return; // Empêche d'ouvrir un dialogue si un autre est actif
+
         dialogueActuel = dialogue;
         playerStats = stats;
         dialoguePanel.SetActive(true);
+        peutQuitter = false;
+        OnDialogueStart?.Invoke(); // Désactive les PNJ pendant le dialogue
+        Invoke(nameof(ActiverFermeture), 0.5f);
         AfficherDialogue();
+    }
+
+    void ActiverFermeture()
+    {
+        peutQuitter = true;
     }
 
     void AfficherDialogue()
@@ -51,10 +66,15 @@ public class DialogueManager : MonoBehaviour
     {
         if (option.testCaracteristique != TypeCharacteristique.Aucune)
         {
-            int jet = Random.Range(1, 20) + playerStats.GetModificateur(option.testCaracteristique);
+            int jet = UnityEngine.Random.Range(1, 20) + playerStats.GetModificateur(option.testCaracteristique);
+
             if (jet >= option.difficulteTest)
             {
                 dialogueActuel = option.reponseReussite;
+            }
+            else if (jet >= option.seuilMoyen) // Nouveau cas "moyen"
+            {
+                dialogueActuel = option.reponseMoyen;
             }
             else
             {
@@ -68,7 +88,21 @@ public class DialogueManager : MonoBehaviour
         }
         else
         {
-            dialoguePanel.SetActive(false);
+            QuitterDialogue();
         }
+    }
+
+    public void QuitterDialogue()
+    {
+        if (peutQuitter)
+        {
+            dialoguePanel.SetActive(false);
+            OnDialogueEnd?.Invoke(); // Réactive les PNJ après le dialogue
+        }
+    }
+
+    public bool EstDialogueOuvert()
+    {
+        return dialoguePanel.activeSelf;
     }
 }

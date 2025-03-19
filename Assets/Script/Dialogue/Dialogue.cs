@@ -15,9 +15,11 @@ public class Dialogue : ScriptableObject
 [Serializable]
 public class DialogueOption
 {
-    public string texteJoueur; // Texte du choix du joueur
-    public TypeCharacteristique testCaracteristique; // Stat utilisée pour le test (ex: Charisme)
-    public int difficulteTest; // Difficulté du jet
-    public Dialogue reponseReussite; // Réponse si le test réussit
-    public Dialogue reponseEchec; // Réponse si le test échoue
+    public string texteJoueur;
+    public TypeCharacteristique testCaracteristique;
+    public int difficulteTest;
+    public int seuilMoyen; // Nouveau seuil pour le résultat moyen
+    public Dialogue reponseReussite;
+    public Dialogue reponseMoyen; // Nouveau champ
+    public Dialogue reponseEchec;
 }
