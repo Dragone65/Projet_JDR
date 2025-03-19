@@ -50,5 +50,16 @@ namespace Koboct.Data
         {
             return _inventaire;
         }
+        public int GetDefense()
+        {
+            int defense = 10 + GetModificateur(TypeCharacteristique.Dexterite);
+
+            if (_armureEquipee != null)
+            {
+                defense += _armureEquipee.ModificateurDArmure;
+            }
+
+            return defense;
+        }
     }
 }

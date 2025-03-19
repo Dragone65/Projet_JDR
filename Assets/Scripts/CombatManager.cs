@@ -12,6 +12,7 @@ public class CombatManager : MonoBehaviour
     public TMP_Text actionText;
     public TMP_Text playerHPText, enemyHPText;
     public Button attackButton, inventoryButton, fleeButton;
+    public TMP_Text playerDefenseText;
 
     public GameObject inventoryPanel; // UI de l'inventaire
     public Transform inventoryContainer; // Parent des boutons d'inventaire
@@ -71,9 +72,10 @@ public class CombatManager : MonoBehaviour
             {
                 HandleCriticalFailure(true);
             }
-            else if (attackRoll >= 10)
+            else if (attackRoll >= enemyStats.GetDefense())
             {
                 damage = RollDice(diceType) + playerStats.GetModificateur(TypeCharacteristique.Force);
+                
                 enemyHP -= Mathf.Max(damage, 1);
                 actionText.text = $"Vous attaquez ! (Jet: {attackRoll})\nDégâts : {damage}";
             }
@@ -104,17 +106,17 @@ public class CombatManager : MonoBehaviour
         int attackRoll = RollDice(20) + enemyStats.GetModificateur(TypeCharacteristique.Force);
         int damage = 0;
 
-        if (attackRoll - enemyStats.GetModificateur(TypeCharacteristique.Force) == 20)
+        if (attackRoll - enemyStats.GetModificateur(TypeCharacteristique.Force) == 20) // attaque critique
         {
             int critDamage = (RollDice(4) + enemyStats.GetModificateur(TypeCharacteristique.Force)) * 2;
             playerHP -= Mathf.Max(critDamage, 1);
             actionText.text = $" L'ennemi fait un COUP CRITIQUE ! (Jet: 20)\nIl vous inflige {critDamage} dégâts !";
         }
-        else if (attackRoll - enemyStats.GetModificateur(TypeCharacteristique.Force) == 1)
+        else if (attackRoll - enemyStats.GetModificateur(TypeCharacteristique.Force) == 1) // echec critique
         {
             HandleCriticalFailure(false);
         }
-        else if (attackRoll >= 10)
+        else if (attackRoll >= playerStats.GetDefense()) // Comparer le jet d'attaque à la défense
         {
             damage = RollDice(4) + enemyStats.GetModificateur(TypeCharacteristique.Force);
             playerHP -= Mathf.Max(damage, 1);
@@ -218,6 +220,7 @@ public class CombatManager : MonoBehaviour
     {
         playerHPText.text = $"PV Joueur: {playerHP}";
         enemyHPText.text = $"PV Ennemi: {enemyHP}";
+        playerDefenseText.text = $"Défense : {playerStats.GetDefense()}";
     }
 
     void EndBattle()
