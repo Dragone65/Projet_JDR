@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c75d5caf907c427c898a0cddad207b3b, type: 3}
+  m_Name: Guerrier
+  m_EditorClassIdentifier: 
+  _nom: Guerrier
+  _voies:
+  - {fileID: 11400000, guid: 020bf43f58e00704caa23beecbfcabd7, type: 2}
+  - {fileID: 11400000, guid: 53d9bdbe6de328842a44f0d0419b07c9, type: 2}
+  - {fileID: 11400000, guid: ed211b40f6be4dd468e05779cda3f354, type: 2}
+  _deDePointDeVie: 10
+  _equimentsDeBase:
+  - {fileID: 11400000, guid: 91955a7e687472a42872f1467c52690c, type: 2}
+  - {fileID: 11400000, guid: d01a16b9fd039ec49b562105a12a910d, type: 2}
+  - {fileID: 11400000, guid: b264c56531a565a4b9e110b291cc3de2, type: 2}
+  - {fileID: 11400000, guid: 47d4b1e6ed5c1544db675f7c3c78a0fb, type: 2}
+  - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
+  - {fileID: 11400000, guid: d285022a8cbb3a446b34704886b8b0bd, type: 2}
+  - {fileID: 11400000, guid: f3c2ac4cefa80f54cb3aec5a7c7cbd6e, type: 2}
+  - {fileID: 11400000, guid: 1a48ce9fb13df4c43b48047d6afa48dd, type: 2}
+  _argentDeDepart: 5

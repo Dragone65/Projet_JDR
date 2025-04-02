@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: "Voie de la pri\xE8re"
+  m_EditorClassIdentifier: 
+  _nom: "Voie de la pri\xE8re"
+  _capacites:
+  - {fileID: 11400000, guid: be7603a1ae0396143a7a866bc34064f4, type: 2}
+  - {fileID: 11400000, guid: f6037192b74a0b0498beca1e84715811, type: 2}
+  - {fileID: 11400000, guid: 737bd0a9e9c1d174bb7441929976288a, type: 2}
+  - {fileID: 11400000, guid: 7e29a2788354b6f4fb06e707fbfd09ce, type: 2}

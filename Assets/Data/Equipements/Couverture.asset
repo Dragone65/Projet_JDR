@@ -13,6 +13,6 @@ MonoBehaviour:
   m_Name: Couverture
   m_EditorClassIdentifier: 
   _nom: Couverture
-  _prix: 0.1
+  _prix: 1
   _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
   _prefab: {fileID: 0}

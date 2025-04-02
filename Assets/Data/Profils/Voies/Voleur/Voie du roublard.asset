@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: Voie du roublard
+  m_EditorClassIdentifier: 
+  _nom: Voie du roublard
+  _capacites:
+  - {fileID: 11400000, guid: ce974a30109c68940865603520bace09, type: 2}
+  - {fileID: 11400000, guid: 170d8866887ead842ade9cf8e103f3d5, type: 2}
+  - {fileID: 11400000, guid: 430d7ec388a026d4ab8ddd6f43d8c203, type: 2}
+  - {fileID: 11400000, guid: e04d9d6388765924bb9f2b8fe6ab35e4, type: 2}

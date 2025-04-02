@@ -13,8 +13,19 @@ MonoBehaviour:
   m_Name: Pretre
   m_EditorClassIdentifier: 
   _nom: Pretre
-  _voies: []
-  _deDePointDeVie: 0
+  _voies:
+  - {fileID: 11400000, guid: 2e6d2540aa109014b8e072d77d690a4d, type: 2}
+  - {fileID: 11400000, guid: be034c8423dd1434ab278ab9e10d0c25, type: 2}
+  - {fileID: 11400000, guid: 4a3f3c387a44ce943bc96a1094d7bd09, type: 2}
+  _deDePointDeVie: 8
   _equimentsDeBase:
-  - {fileID: 11400000, guid: c2d9f0141648c4c4abbbb69203dbe343, type: 2}
+  - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
+  - {fileID: 11400000, guid: d285022a8cbb3a446b34704886b8b0bd, type: 2}
+  - {fileID: 11400000, guid: 47d4b1e6ed5c1544db675f7c3c78a0fb, type: 2}
+  - {fileID: 11400000, guid: f3c2ac4cefa80f54cb3aec5a7c7cbd6e, type: 2}
+  - {fileID: 11400000, guid: 1a48ce9fb13df4c43b48047d6afa48dd, type: 2}
+  - {fileID: 11400000, guid: c1d400cf7e11d31469c8ca3e26975a54, type: 2}
+  - {fileID: 11400000, guid: 736dd765c1e11f94bba89117b582f1b3, type: 2}
+  - {fileID: 11400000, guid: 258e0eaab511f414ab93e9f44fee8006, type: 2}
+  - {fileID: 11400000, guid: d3be53d43ee37524f88c944e8e4b9b3e, type: 2}
   _argentDeDepart: 5
