@@ -14,3 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   textePNJ: Je vais t'arracher tes os et boire ton sang batard
   options: []
+  reactions:
+  - raceCible: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
+    reactionRace: {fileID: 11400000, guid: ff9cd439b5ea5b846914a06355a51da0, type: 2}

@@ -1081,6 +1081,7 @@ MonoBehaviour:
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
+  race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
   _inventaire: []
   _armeEquipee: {fileID: 0}
   _armureEquipee: {fileID: 0}

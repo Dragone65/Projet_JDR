@@ -6,10 +6,14 @@ namespace Koboct.Data
     public class CharacterStats : MonoBehaviour
     {
         [SerializeField] private List<Characteristique> _characteristiques = new();
+        [SerializeField] private Race race;
         [SerializeField] private List<Equipement> _inventaire = new();
         [SerializeField] private Arme _armeEquipee;
         [SerializeField] private Protection _armureEquipee;
-
+        public Race GetRace()
+        {
+            return race;
+        }
         public void AjouterEquipement(Equipement equipement)
         {
             _inventaire.Add(equipement);
@@ -36,6 +40,8 @@ namespace Koboct.Data
         {
             return _armureEquipee;
         }
+       
+        
         public int GetValeur(TypeCharacteristique type)
         {
             return _characteristiques.Find(car => car.MonType == type)?.Valeur ?? 0;

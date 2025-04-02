@@ -7,9 +7,9 @@ using UnityEngine;
 public class Dialogue : ScriptableObject
 {
     [TextArea(3, 10)]
-    public string textePNJ; // Texte affiché par le PNJ
-
+    public string textePNJ;
     public List<DialogueOption> options = new List<DialogueOption>(); // Liste des options de réponse
+    public List<ReactionsOption> reactions = new List<ReactionsOption>();
 }
 
 [Serializable]
@@ -18,8 +18,14 @@ public class DialogueOption
     public string texteJoueur;
     public TypeCharacteristique testCaracteristique;
     public int difficulteTest;
-    public int seuilMoyen; // Nouveau seuil pour le résultat moyen
+    public int seuilMoyen; 
     public Dialogue reponseReussite;
-    public Dialogue reponseMoyen; // Nouveau champ
+    public Dialogue reponseMoyen; 
     public Dialogue reponseEchec;
+}
+[Serializable]
+public class ReactionsOption
+{
+    public Race raceCible;
+    public Dialogue reactionRace;
 }

@@ -4,7 +4,7 @@ MonoImporter:
   externalObjects: {}
   serializedVersion: 2
   defaultReferences:
-  - _race: {instanceID: 0}
+  - _race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
   - _profil: {instanceID: 0}
   - _profilMagicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
   - _profilPretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}

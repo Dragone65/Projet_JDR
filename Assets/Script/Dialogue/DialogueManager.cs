@@ -44,10 +44,22 @@ public class DialogueManager : MonoBehaviour
     {
         peutQuitter = true;
     }
-
+    void AppliquerReaction()
+    {
+        foreach (ReactionsOption reaction in dialogueActuel.reactions)
+        {
+            if (playerStats.GetRace() == reaction.raceCible)
+            {
+                dialogueActuel.textePNJ = reaction.reactionRace.textePNJ;
+                break;
+            }
+        }
+    }
     void AfficherDialogue()
     {
+        AppliquerReaction();
         pnjDialogueText.text = dialogueActuel.textePNJ;
+        
 
         foreach (Transform child in choixContainer)
         {
@@ -72,7 +84,7 @@ public class DialogueManager : MonoBehaviour
             {
                 dialogueActuel = option.reponseReussite;
             }
-            else if (jet >= option.seuilMoyen) // Nouveau cas "moyen"
+            else if (jet >= option.seuilMoyen) 
             {
                 dialogueActuel = option.reponseMoyen;
             }
