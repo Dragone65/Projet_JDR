@@ -13,12 +13,12 @@ MonoBehaviour:
   m_Name: MonPersonnage
   m_EditorClassIdentifier: 
   _nom: 
-  _nomJoueur: Bilbo
+  _nomJoueur: 
   _description: 
   _sexe: 2
-  _taille: 0
-  _poids: 0
-  _age: 0
+  _taille: 0.5
+  _poids: 20
+  _age: 20
   _characteristiques:
   - _monType: 1
     _valeur: 0

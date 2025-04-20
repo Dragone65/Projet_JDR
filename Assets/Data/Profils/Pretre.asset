@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Pretre
   m_EditorClassIdentifier: 
   _nom: Pretre
+
   _voies:
   - {fileID: 11400000, guid: 2e6d2540aa109014b8e072d77d690a4d, type: 2}
   - {fileID: 11400000, guid: be034c8423dd1434ab278ab9e10d0c25, type: 2}
@@ -28,4 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 736dd765c1e11f94bba89117b582f1b3, type: 2}
   - {fileID: 11400000, guid: 258e0eaab511f414ab93e9f44fee8006, type: 2}
   - {fileID: 11400000, guid: d3be53d43ee37524f88c944e8e4b9b3e, type: 2}
+
   _argentDeDepart: 5

@@ -19,6 +19,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: b055cfaab77ebab40b775331923f53be, type: 2}
   _deDePointDeVie: 6
   _equimentsDeBase:
+
   - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
   - {fileID: 11400000, guid: d285022a8cbb3a446b34704886b8b0bd, type: 2}
   - {fileID: 11400000, guid: 47d4b1e6ed5c1544db675f7c3c78a0fb, type: 2}
@@ -28,4 +29,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 29eddb3c110ebb74fac1504fd87bdd22, type: 2}
   - {fileID: 11400000, guid: 5d42fc59174d41d4789484158c3085ab, type: 2}
   - {fileID: 11400000, guid: 1d2ee7be669fea54bb7982a940041397, type: 2}
+
   _argentDeDepart: 5

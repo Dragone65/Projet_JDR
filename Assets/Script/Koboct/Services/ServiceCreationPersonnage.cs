@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Linq;
+
 using Koboct.Data;
 using UnityEngine;
 using UnityEngine.Serialization;
@@ -21,6 +23,7 @@ namespace Koboct.Services
 
         [FormerlySerializedAs("_listeProfilsDisponible")]
         public List<Profil> ListeProfilsDisponible = new();
+
 
         private void OnEnable()
         {
