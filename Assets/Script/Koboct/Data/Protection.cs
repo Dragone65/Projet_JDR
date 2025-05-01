@@ -1,8 +1,10 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 namespace Koboct.Data
 {
     [CreateAssetMenu(fileName = "Protection", menuName = "Protection", order = 0)]
+    [Serializable]
     public class Protection : Equipement
     {
         [SerializeField] private bool _armure;

@@ -1,5 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-6411637368636793433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
+  m_Name: Epee longue
+  m_EditorClassIdentifier: 
+  _nom: Epee longue
+  _prix: 6
+  _icon: {fileID: 21300000, guid: c4b41ef02dac20f4c8116626148ebcc1, type: 3}
+  _prefab: {fileID: 0}
+  _contact: 1
+  _distance: 0
+  _uneMain: 1
+  _deuxMains: 0
+  _typeDeDeDegats: 8
+  _nbDeDeDegats: 1
+  _modificateurDeDegats: 1
+--- !u!114 &-1064283767932950940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Couverture
+  m_EditorClassIdentifier: 
+  _nom: Couverture
+  _prix: 0.1
+  _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
+  _prefab: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16,51 +55,54 @@ MonoBehaviour:
   _nomJoueur: 
   _description: 
   _sexe: 2
-  _taille: 0.5
-  _poids: 20
-  _age: 20
-  _characteristiques:
+  _taille: 0
+  _poids: 0
+  _age: 0
+  _caracteristiques:
   - _monType: 1
-    _valeur: 0
-    _modificateur: 0
+    _valeur: 12
+    _modificateur: 1
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 2
-    _valeur: 0
-    _modificateur: 0
+    _valeur: 16
+    _modificateur: 3
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 3
-    _valeur: 0
-    _modificateur: 0
+    _valeur: 15
+    _modificateur: 2
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 4
-    _valeur: 0
+    _valeur: 11
     _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 5
-    _valeur: 0
+    _valeur: 10
     _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 6
-    _valeur: 0
-    _modificateur: 0
+    _valeur: 13
+    _modificateur: 1
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
-  _race: {fileID: 0}
+  _race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
   _profil: {fileID: 0}
   _deDePointDeVie: 0
   _pointDeVie: 0
   _equipements: []
+  Voie1: {fileID: 11400000, guid: 13d2ddeee51778343bf9d7e7264e8ff8, type: 2}
+  Voie2: {fileID: 0}
+  Voie3: {fileID: 0}
   _bourse: 0
   _pointDeDefense: 0
   _modAttaqueContact: 0
@@ -68,3 +110,42 @@ MonoBehaviour:
   _modAttaqueMagique: 0
   _profilMagicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
   _profilPretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
+--- !u!114 &1495243927082252537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
+  m_Name: Epee longue
+  m_EditorClassIdentifier: 
+  _nom: Epee longue
+  _prix: 6
+  _icon: {fileID: 21300000, guid: c4b41ef02dac20f4c8116626148ebcc1, type: 3}
+  _prefab: {fileID: 0}
+  _contact: 1
+  _distance: 0
+  _uneMain: 1
+  _deuxMains: 0
+  _typeDeDeDegats: 8
+  _nbDeDeDegats: 1
+  _modificateurDeDegats: 1
+--- !u!114 &8215283241350439314
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Couverture
+  m_EditorClassIdentifier: 
+  _nom: Couverture
+  _prix: 0.1
+  _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
+  _prefab: {fileID: 0}

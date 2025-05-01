@@ -18,12 +18,15 @@ namespace Koboct.Data
         [SerializeField] private float _poids;
         [Range(20, 350)]
         [SerializeField] private int _age;
-        [SerializeField] private List<Characteristique> _characteristiques = new();
+        [SerializeField] private List<Caracteristique> _caracteristiques = new();
         [SerializeField] private Race _race;
         [SerializeField] private Profil _profil;
         [SerializeField] private TypeDeDe _deDePointDeVie;
         [SerializeField] private int _pointDeVie;
         [SerializeField] private List<Equipement> _equipements = new();
+        [SerializeField] public Voie Voie1;  
+        [SerializeField] public Voie Voie2; 
+        [SerializeField] public Voie Voie3;
         [SerializeField] private int _bourse;
         [SerializeField] private int _pointDeDefense;
         [SerializeField] private int _modAttaqueContact;
@@ -39,13 +42,13 @@ namespace Koboct.Data
 
         public void Reset()
         {
-            _characteristiques.Clear();
-            _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Force });
-            _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Dexterite });
-            _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Constitution });
-            _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Intelligence });
-            _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Sagesse });
-            _characteristiques.Add(new Characteristique { MonType = TypeCharacteristique.Charisme });
+            _caracteristiques.Clear();
+            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Force });
+            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Dexterite });
+            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Constitution });
+            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Intelligence });
+            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Sagesse });
+            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Charisme });
             _race = null;
             _profil = null;
             _deDePointDeVie = 0;
@@ -69,57 +72,94 @@ namespace Koboct.Data
         {
             set => _nomJoueur = value;
         }
-        private int GetCharacteristiqueValeur(TypeCharacteristique type)
+
+        public Race Race
         {
-            return GetCharacteristique(type).Valeur;
+            get => _race;
+            set => _race = value;
         }
 
-        private int GetCharacteristiqueModificateur(TypeCharacteristique type)
+        public Profil Profil
         {
-            return GetCharacteristique(type).Modificateur;
+            get => _profil;
+            set => _profil = value;
         }
 
-        private Characteristique GetCharacteristique(TypeCharacteristique type)
+        public List<Equipement> Equipements
         {
-            return _characteristiques.First(car => car.MonType == type);
+            get => _equipements;
+            set => _equipements = value;
+        }
+
+        public int GetCaracteristiqueValeur(TypeCaracteristique type)
+        {
+            return GetCaracteristique(type).Valeur;
+        }
+
+        public int GetCaracteristiqueModificateur(TypeCaracteristique type)
+        {
+            return GetCaracteristique(type).Modificateur;
+        }
+
+        public Caracteristique GetCaracteristique(TypeCaracteristique type)
+        {
+            return _caracteristiques.First(car => car.MonType == type);
         }
 
         [ContextMenu("Calculer les points de vies")]
         private void CalculPointDeVie()
         {
-            _deDePointDeVie = _profil.DeDePointDeVie;
-            _pointDeVie = (int)_deDePointDeVie + GetCharacteristiqueModificateur(TypeCharacteristique.Constitution);
+            _deDePointDeVie = Profil.DeDePointDeVie;
+            _pointDeVie = (int)_deDePointDeVie + GetCaracteristiqueModificateur(TypeCaracteristique.Constitution);
         }
 
         [ContextMenu("Calculer les points de défense")]
         private void CalculPointDeDefense()
         {
-            _pointDeDefense = 10 + GetCharacteristiqueModificateur(TypeCharacteristique.Dexterite) +
+            _pointDeDefense = 10 + GetCaracteristiqueModificateur(TypeCaracteristique.Dexterite) +
                               _equipements.OfType<Protection>().Sum(protection => protection.ModificateurDArmure);
         }
 
         [ContextMenu("Calculer les mod. d'attaque")]
         private void CalculModDAttaque()
         {
-            _modAttaqueContact = GetCharacteristiqueModificateur(TypeCharacteristique.Force) + 1;
-            _modAttaqueDistance = GetCharacteristiqueModificateur(TypeCharacteristique.Dexterite) + 1;
+            _modAttaqueContact = GetCaracteristiqueModificateur(TypeCaracteristique.Force) + 1;
+            _modAttaqueDistance = GetCaracteristiqueModificateur(TypeCaracteristique.Dexterite) + 1;
 
             
             if (_profil == _profilMagicien)
-                _modAttaqueMagique = GetCharacteristiqueModificateur(TypeCharacteristique.Intelligence) + 1;
+                _modAttaqueMagique = GetCaracteristiqueModificateur(TypeCaracteristique.Intelligence) + 1;
             else if (_profil == _profilPretre)
-                _modAttaqueMagique = GetCharacteristiqueModificateur(TypeCharacteristique.Sagesse) + 1;
+                _modAttaqueMagique = GetCaracteristiqueModificateur(TypeCaracteristique.Sagesse) + 1;
             else
                 _modAttaqueMagique = 0;
         }
 
-        public void SetCharacterisicValue(TypeCharacteristique typeCharacteristique, int i)
+        public void SetCaracterisicValue(TypeCaracteristique typeCaracteristique, int i)
         {
-            var characteristic = _characteristiques.FirstOrDefault(car => car.MonType == typeCharacteristique);
-            if (characteristic != null)
+            var caracteristic = _caracteristiques.FirstOrDefault(car => car.MonType == typeCaracteristique);
+            if (caracteristic != null)
             {
-                characteristic.Valeur = i;
+                caracteristic.Valeur = i;
             }
+        }
+
+        public void EquipementsClear()
+        {
+#if UNITY_EDITOR
+            foreach (var equipement in Equipements)
+            {
+
+
+                UnityEditor.AssetDatabase.RemoveObjectFromAsset(equipement);
+                
+
+            }
+
+            UnityEditor.EditorUtility.SetDirty(this);
+            UnityEditor.AssetDatabase.SaveAssets();
+#endif
+            Equipements.Clear();
         }
     }
 

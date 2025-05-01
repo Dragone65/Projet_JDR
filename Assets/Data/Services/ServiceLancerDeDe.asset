@@ -12,3 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 59e0f49d62f24864a038678a64c1e899, type: 3}
   m_Name: ServiceLancerDeDe
   m_EditorClassIdentifier: 
+  MonTestTypesDeDe: 4
+  NbLancer: 1000000

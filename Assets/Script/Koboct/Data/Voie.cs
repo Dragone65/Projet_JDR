@@ -6,6 +6,9 @@ namespace Koboct.Data
     [CreateAssetMenu(fileName = "Voie", menuName = "Voie", order = 0)]
     public class Voie:NamedScriptableObject
     {
+        
         [SerializeField] private List<Capacite> _capacites;
+
+        public List<Capacite> Capacites => _capacites;
     }
 }

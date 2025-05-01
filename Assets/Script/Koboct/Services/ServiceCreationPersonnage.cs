@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 using Koboct.Data;
 using UnityEngine;
+using UnityEngine.Serialization;
 
 namespace Koboct.Services
 {
@@ -11,15 +13,26 @@ namespace Koboct.Services
         [SerializeField] private Personnage _monPersonnage;
 
         [SerializeField] private ServiceLancerDeDe _monServiceDeLanceDeDe;
-        [SerializeField] private int[] _monResultatJetCharacteristique;
 
-        [SerializeField] private List<Race> _listRaceDisponible = new ();
-        [SerializeField] private List<Profil> _listProfilDisponible = new ();
+        [SerializeField] private int[] _monResultatJetCaracteristique;
+
+        [FormerlySerializedAs("_listeRacesDisponible")]
+        public List<Race> ListeRacesDisponible = new();
+
+        [FormerlySerializedAs("_listeProfilsDisponible")]
+        public List<Profil> ListeProfilsDisponible = new();
 
         private void OnEnable()
         {
             Reset();
         }
+
+        public Caracteristique GetCaracteristique(TypeCaracteristique type)
+        {
+            return _monPersonnage.GetCaracteristique(type);
+        }
+
+        public int[] MonResultatJetCaracteristique => _monResultatJetCaracteristique;
 
         public void SetNomJoueur(string nomJoueur)
         {
@@ -28,23 +41,36 @@ namespace Koboct.Services
 
         private void Reset()
         {
-            _monResultatJetCharacteristique = null;
+            _monResultatJetCaracteristique = null;
         }
 
-        [ContextMenu("Lancer Dé Charactèristique")]
-        public void LancerDeCharacteristique()
+        [ContextMenu("Lancer Dé Caractèristique")]
+        public void LancerDeCaracteristique()
         {
             _monPersonnage.Reset();
-            _monServiceDeLanceDeDe.LancerDesCharacteristiques(RetourResultatLancerCharacterisque);
+            _monServiceDeLanceDeDe.LancerDesCaracteristiques(RetourResultatLancerCaracterisque);
         }
 
-        public void RetourResultatLancerCharacterisque(int[] resultat)
+        public void LancerDeCaracteristiqueAvecValidation()
         {
-            _monResultatJetCharacteristique = resultat;
+            _monPersonnage.Reset();
+            _monServiceDeLanceDeDe.LancerDesCaracteristiques(RetourResultatLancerCaracterisqueValid);
         }
 
-        [ContextMenu("Valider Dé Charactèristique")]
-        public void ValiderDeCharacteristique()
+        public void RetourResultatLancerCaracterisque(int[] resultat)
+        {
+            _monResultatJetCaracteristique = resultat.OrderByDescending(v => v).ToArray();
+        }
+
+        public void RetourResultatLancerCaracterisqueValid(int[] resultat)
+        {
+            _monResultatJetCaracteristique = resultat.OrderByDescending(v => v).ToArray();
+            if (!ValiderResultatDes())
+                LancerDeCaracteristiqueAvecValidation();
+        }
+
+        [ContextMenu("Valider Dé Caractèristique")]
+        public void ValiderDeCaracteristique()
         {
             Debug.Log(ValiderResultatDes());
         }
@@ -52,24 +78,115 @@ namespace Koboct.Services
         [ContextMenu("Auto Assignation valeurs dés au personnage")]
         public void AutoAssign()
         {
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Force, _monResultatJetCharacteristique[0]);
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Dexterite, _monResultatJetCharacteristique[1]);
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Constitution, _monResultatJetCharacteristique[2]);
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Intelligence, _monResultatJetCharacteristique[3]);
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Intelligence, _monResultatJetCharacteristique[3]);
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Sagesse, _monResultatJetCharacteristique[4]);
-            _monPersonnage.SetCharacterisicValue(TypeCharacteristique.Charisme, _monResultatJetCharacteristique[5]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Force, _monResultatJetCaracteristique[0]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Dexterite, _monResultatJetCaracteristique[1]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Constitution, _monResultatJetCaracteristique[2]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Intelligence, _monResultatJetCaracteristique[3]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Intelligence, _monResultatJetCaracteristique[3]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Sagesse, _monResultatJetCaracteristique[4]);
+            _monPersonnage.SetCaracterisicValue(TypeCaracteristique.Charisme, _monResultatJetCaracteristique[5]);
         }
 
-        private bool ValiderResultatDes()
+        public bool ValiderResultatDes()
         {
             int sum = 0;
             for (int i = 0; i < 6; i++)
             {
-                sum += Characteristique.CalculModificateur(_monResultatJetCharacteristique[i]);
+                sum += Caracteristique.CalculModificateur(_monResultatJetCaracteristique[i]);
+            }
+#if UNITY_EDITOR
+            Debug.Log(sum);
+#endif
+            return sum >= 3;
+        }
+
+        public void SetCaracteristique(TypeCaracteristique myCarac, int selectedValue)
+        {
+            _monPersonnage.SetCaracterisicValue(myCarac, selectedValue);
+        }
+
+        public void ChangeRace(Race race)
+        {
+            var actualRace = _monPersonnage.Race;
+            if (actualRace != null)
+                actualRace.RemoveCaracteristiqueModificateur(_monPersonnage);
+
+
+            if (race == null) return;
+
+            _monPersonnage.Race = race;
+            _monPersonnage.Race.ApplyCaracteristiqueModificateur(_monPersonnage);
+        }
+
+        private void RemoveAndAddCapacitiesToVoie(Voie sourceVoie, Voie targetVoie)
+        {
+            if (sourceVoie == null || targetVoie == null) return;
+            foreach (var capacite in targetVoie.Capacites)
+            {
+#if UNITY_EDITOR
+
+                UnityEditor.AssetDatabase.RemoveObjectFromAsset(capacite);
+#endif
             }
 
-            return sum > 3;
+            targetVoie.Capacites.Clear();
+            foreach (var capacite in sourceVoie.Capacites)
+            {
+                var capacitelone = Instantiate(capacite);
+
+                capacitelone.name = capacitelone.name.Replace("(Clone)", string.Empty);
+#if UNITY_EDITOR
+
+
+                UnityEditor.AssetDatabase.AddObjectToAsset(capacitelone, _monPersonnage);
+                UnityEditor.EditorUtility.SetDirty(capacitelone);
+#endif
+                targetVoie.Capacites.Add(capacitelone);
+            }
+
+
+#if UNITY_EDITOR
+            UnityEditor.EditorUtility.SetDirty(_monPersonnage);
+            // Save all changes to disk
+            UnityEditor.AssetDatabase.SaveAssets();
+#endif
+        }
+
+        public void ChangeProfil(Profil profil)
+        {
+            _monPersonnage.EquipementsClear();
+
+            if (profil == null) return;
+
+            _monPersonnage.Profil = profil;
+
+            if (profil.Voies == null || profil.Voies.Count == 0) return;
+
+            // Process each Voie and add capacities
+            RemoveAndAddCapacitiesToVoie(profil.Voies.ElementAtOrDefault(0), _monPersonnage.Voie1);
+            RemoveAndAddCapacitiesToVoie(profil.Voies.ElementAtOrDefault(1), _monPersonnage.Voie2);
+            RemoveAndAddCapacitiesToVoie(profil.Voies.ElementAtOrDefault(2), _monPersonnage.Voie3);
+
+            foreach (var equipement in profil.EquimentsDeBase)
+            {
+                var equipementClon = Instantiate(equipement);
+
+                equipementClon.name = equipementClon.name.Replace("(Clone)", string.Empty);
+#if UNITY_EDITOR
+
+
+                UnityEditor.AssetDatabase.AddObjectToAsset(equipementClon, _monPersonnage);
+                UnityEditor.EditorUtility.SetDirty(equipementClon);
+#endif
+                _monPersonnage.Equipements.Add(equipementClon);
+            }
+
+
+#if UNITY_EDITOR
+            UnityEditor.EditorUtility.SetDirty(_monPersonnage);
+            // Save all changes to disk
+            UnityEditor.AssetDatabase.SaveAssets();
+#endif
         }
     }
 }

@@ -1,5 +1,4 @@
-﻿
-using Koboct.Services;
+﻿using Koboct.Services;
 using UnityEngine;
 
 namespace Koboct.UI
@@ -11,6 +10,12 @@ namespace Koboct.UI
         public void SetJoueurName(string name)
         {
             _monService.SetNomJoueur(name);
+        }
+
+        public void LancerDeCarac()
+        {
+            _monService.LancerDeCaracteristiqueAvecValidation();
+           
         }
     }
 }
