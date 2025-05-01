@@ -270,12 +270,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _characteristiques:
-  - _monType: 0
-    _valeur: 0
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
   - _monType: 1
     _valeur: 12
     _modificateur: 1

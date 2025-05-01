@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66dc4013cb5352409411aa2f5bb6b5e, type: 3}
   m_Name: TaperEchoue
   m_EditorClassIdentifier: 
-  textePNJ: Je vais t'arracher tes os et boire ton sang batard
+  textePNJ: Faible
   options: []
   reactions:
   - raceCible: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}

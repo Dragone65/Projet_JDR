@@ -61,7 +61,7 @@ public class DialogueManager : MonoBehaviour
         {
             if (playerStats.GetRace() == reaction.raceCible)
             {
-                dialogueActuel.textePNJ = reaction.reactionRace.textePNJ;
+                dialogueActuel = reaction.reactionRace;
                 break;
             }
         }
