@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: Voie des soins
+  m_EditorClassIdentifier: 
+  _nom: Voie des soins
+  _capacites:
+  - {fileID: 11400000, guid: cfa59df1716da074bb633fa9d21a2b5c, type: 2}
+  - {fileID: 11400000, guid: e199f0e211795a4439e956fe5d50f578, type: 2}
+  - {fileID: 11400000, guid: 897cbe4426b3d7443aa24210e5d2931b, type: 2}
+  - {fileID: 11400000, guid: 6e98dd06b94f1b04aa3517807b990a25, type: 2}

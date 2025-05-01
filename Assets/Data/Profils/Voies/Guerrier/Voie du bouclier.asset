@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: Voie du bouclier
+  m_EditorClassIdentifier: 
+  _nom: Voie du bouclier
+  _capacites:
+  - {fileID: 11400000, guid: 0543022795c46464eb7941b2bdd35986, type: 2}
+  - {fileID: 11400000, guid: 5cc0cea129ec12e4b99fbaa52ffd81fb, type: 2}
+  - {fileID: 11400000, guid: 8117a0f14b323cf4aaa1fac6da287099, type: 2}
+  - {fileID: 11400000, guid: d9f3f8ea10abb354f9764f68b54d780f, type: 2}
