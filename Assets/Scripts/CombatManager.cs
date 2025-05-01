@@ -4,6 +4,7 @@ using TMPro;
 using System.Collections;
 using System.Collections.Generic;
 using Koboct.Data;
+using UnityEngine.SceneManagement;
 
 public class CombatManager : MonoBehaviour
 {
@@ -18,8 +19,10 @@ public class CombatManager : MonoBehaviour
     public Transform inventoryContainer; // Parent des boutons d'inventaire
     public Button itemButtonPrefab; // Préfabriqué de bouton pour les objets
 
-    public CharacterStats playerStats;
+    private CharacterStats playerStats;
     public CharacterStats enemyStats;
+
+    public Dialogue dialogueRetour;
 
     private int playerHP;
     private int enemyHP;
@@ -33,8 +36,12 @@ public class CombatManager : MonoBehaviour
 
     void Start()
     {
-        playerHP = playerStats.GetValeur(TypeCharacteristique.Constitution) + 10;
-        enemyHP = enemyStats.GetValeur(TypeCharacteristique.Constitution) + 10;
+        GameObject joueur = GameObject.FindGameObjectWithTag("Player");
+        if (joueur != null) { 
+            playerStats = joueur.GetComponent<CharacterStats>();
+        }
+        playerHP = playerStats.GetModificateur(TypeCharacteristique.Constitution) + 10;
+        enemyHP = enemyStats.GetModificateur(TypeCharacteristique.Constitution) + 10;
 
         UpdateUI();
         actionText.text = "Un ennemi apparaît !";
@@ -227,6 +234,14 @@ public class CombatManager : MonoBehaviour
     {
         attackButton.interactable = false;
         fleeButton.interactable = false;
+        GameManager.Instance.LancerDialogueAuRetour(dialogueRetour);
+        StartCoroutine(RetourALaSceneDialogue());
+    }
+
+    IEnumerator RetourALaSceneDialogue()
+    {
+        yield return new WaitForSeconds(2f); // Attendre un peu pour que le joueur voie le résultat
+        SceneManager.LoadScene("Dialogue");
     }
 
     int RollDice(int sides)

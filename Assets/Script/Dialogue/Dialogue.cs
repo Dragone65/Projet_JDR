@@ -22,6 +22,7 @@ public class DialogueOption
     public Dialogue reponseReussite;
     public Dialogue reponseMoyen; 
     public Dialogue reponseEchec;
+    public string sceneSuivante;
 }
 [Serializable]
 public class ReactionsOption

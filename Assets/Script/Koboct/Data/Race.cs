@@ -23,6 +23,7 @@ namespace Koboct.Data
             {
                 monPersonnage.SetCaracterisicValue(modificateur.MonType,
                     monPersonnage.GetCaracteristiqueValeur(modificateur.MonType) + modificateur.Modificateur);
+
             }
         }
     }

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: Voie du compagnon animal
+  m_EditorClassIdentifier: 
+  _nom: Voie du compagnon animal
+  _capacites:
+  - {fileID: 11400000, guid: 20e6381fff979414db4042d172951376, type: 2}
+  - {fileID: 11400000, guid: c2cf4cf0eafdcf24dad3fe2b807f990d, type: 2}
+  - {fileID: 11400000, guid: 744b27973b661e947bb0a8e45ef859ca, type: 2}
+  - {fileID: 11400000, guid: b5d2487237381cb428aa6cc331b5d335, type: 2}

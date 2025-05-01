@@ -21,11 +21,13 @@ namespace Koboct.UI
         [SerializeField] private Caracteristique caracteristique;
         public UnityEvent CaracteristiqueChoiceFinished = new();
 
+
         private void Start()
         {
             if (_caracDropdown == null)
                 _caracDropdown = GetComponent<TMP_Dropdown>();
             remainingValues = Service.MonResultatJetCaracteristique.ToList();
+
             // Populate the dropdown
             RefreshDropdown();
 
@@ -75,6 +77,7 @@ namespace Koboct.UI
             // Get the selected value
             int selectedValue = remainingValues[index - 1];
             Service.SetCaracteristique(MyCarac, selectedValue);
+
             // Remove the selected value from the list of remaining values
             remainingValues.Remove(selectedValue);
 

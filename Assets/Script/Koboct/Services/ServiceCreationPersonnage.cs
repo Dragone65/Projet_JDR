@@ -22,6 +22,7 @@ namespace Koboct.Services
         [FormerlySerializedAs("_listeProfilsDisponible")]
         public List<Profil> ListeProfilsDisponible = new();
 
+
         private void OnEnable()
         {
             Reset();
@@ -55,11 +56,13 @@ namespace Koboct.Services
         {
             _monPersonnage.Reset();
             _monServiceDeLanceDeDe.LancerDesCaracteristiques(RetourResultatLancerCaracterisqueValid);
+
         }
 
         public void RetourResultatLancerCaracterisque(int[] resultat)
         {
             _monResultatJetCaracteristique = resultat.OrderByDescending(v => v).ToArray();
+
         }
 
         public void RetourResultatLancerCaracterisqueValid(int[] resultat)
@@ -71,6 +74,7 @@ namespace Koboct.Services
 
         [ContextMenu("Valider Dé Caractèristique")]
         public void ValiderDeCaracteristique()
+
         {
             Debug.Log(ValiderResultatDes());
         }
@@ -128,6 +132,12 @@ namespace Koboct.Services
                 UnityEditor.AssetDatabase.RemoveObjectFromAsset(capacite);
 #endif
             }
+#if UNITY_EDITOR
+            Debug.Log(sum);
+#endif
+            return sum >= 3;
+        }
+
 
             targetVoie.Capacites.Clear();
             foreach (var capacite in sourceVoie.Capacites)
@@ -187,6 +197,23 @@ namespace Koboct.Services
             // Save all changes to disk
             UnityEditor.AssetDatabase.SaveAssets();
 #endif
-        }
+        // public void SetCharacteristique(TypeCharacteristique myCarac, int selectedValue)
+        // {
+        //     _monPersonnage.SetCharacterisicValue(myCarac, selectedValue);
+        // }
+
+        // public void ChangeRace(Race race)
+        // {
+        //     var actualRace = _monPersonnage.Race;
+        //     if (actualRace != null)
+        //         actualRace.RemoveCharacteristiqueModificateur(_monPersonnage);
+
+
+        //     if (race == null) return;
+
+        //     _monPersonnage.Race = race;
+        //     _monPersonnage.Race.ApplyCharacteristiqueModificateur(_monPersonnage);
+
+        // }
     }
 }

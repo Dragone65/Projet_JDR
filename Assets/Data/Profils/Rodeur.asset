@@ -15,8 +15,18 @@ MonoBehaviour:
   _nom: Rodeur
   _voies:
   - {fileID: 11400000, guid: 13d2ddeee51778343bf9d7e7264e8ff8, type: 2}
+  - {fileID: 11400000, guid: 76ad81d57eab7304e91fd8251d0eafa7, type: 2}
+  - {fileID: 11400000, guid: 535d9f00f96a45d48a4fbf34283eec69, type: 2}
   _deDePointDeVie: 8
   _equimentsDeBase:
-  - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
+
   - {fileID: 11400000, guid: f2bf8b898f3930c4abca55e6b4d20fee, type: 2}
+  - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
+  - {fileID: 11400000, guid: d285022a8cbb3a446b34704886b8b0bd, type: 2}
+  - {fileID: 11400000, guid: 47d4b1e6ed5c1544db675f7c3c78a0fb, type: 2}
+  - {fileID: 11400000, guid: f3c2ac4cefa80f54cb3aec5a7c7cbd6e, type: 2}
+  - {fileID: 11400000, guid: 1a48ce9fb13df4c43b48047d6afa48dd, type: 2}
+  - {fileID: 11400000, guid: 1af40687bd9422542ab1e04b1f4afd85, type: 2}
+  - {fileID: 11400000, guid: 29eddb3c110ebb74fac1504fd87bdd22, type: 2}
+  - {fileID: 11400000, guid: 8a785a2314771964793d127d2c6c1853, type: 2}
   _argentDeDepart: 5
