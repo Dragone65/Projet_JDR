@@ -4,6 +4,7 @@ using System;
 using System.Collections.Generic;
 using UnityEngine.UI;
 using Koboct.Data;
+using UnityEngine.SceneManagement;
 
 public class DialogueManager : MonoBehaviour
 {
@@ -25,6 +26,16 @@ public class DialogueManager : MonoBehaviour
     {
         Instance = this;
         dialoguePanel.SetActive(false);
+    }
+    void Start()
+    {
+        
+        Dialogue dialogue = GameManager.Instance.RecupererDialogueEtReset();
+        Debug.Log("Dialogue récupéré : " + dialogue);
+        if (dialogue != null)
+        {
+            CommencerDialogue(dialogue, GameManager.Instance.playerStats);
+        }
     }
 
     public void CommencerDialogue(Dialogue dialogue, CharacterStats stats)
@@ -93,7 +104,11 @@ public class DialogueManager : MonoBehaviour
                 dialogueActuel = option.reponseEchec;
             }
         }
-
+        if (!string.IsNullOrEmpty(option.sceneSuivante))
+        {
+            SceneManager.LoadScene(option.sceneSuivante);
+            return; 
+        }
         if (dialogueActuel != null)
         {
             AfficherDialogue();

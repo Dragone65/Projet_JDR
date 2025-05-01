@@ -380,14 +380,14 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _characteristiques:
   - _monType: 1
-    _valeur: 20
-    _modificateur: 5
+    _valeur: 14
+    _modificateur: 2
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 2
-    _valeur: 16
-    _modificateur: 3
+    _valeur: 14
+    _modificateur: 2
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
@@ -415,6 +415,7 @@ MonoBehaviour:
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
+  race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
   _inventaire: []
   _armeEquipee: {fileID: 0}
   _armureEquipee: {fileID: 11400000, guid: 5d42fc59174d41d4789484158c3085ab, type: 2}
@@ -929,7 +930,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 616523148}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5967ee04f7e6d6742adbb6b91977e3cc, type: 3}
   m_Name: 
@@ -971,6 +972,7 @@ MonoBehaviour:
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
+  race: {fileID: 0}
   _inventaire: []
   _armeEquipee: {fileID: 11400000, guid: f2bf8b898f3930c4abca55e6b4d20fee, type: 2}
   _armureEquipee: {fileID: 11400000, guid: 5d42fc59174d41d4789484158c3085ab, type: 2}
@@ -1013,8 +1015,8 @@ MonoBehaviour:
   inventoryPanel: {fileID: 0}
   inventoryContainer: {fileID: 0}
   itemButtonPrefab: {fileID: 0}
-  playerStats: {fileID: 616523153}
   enemyStats: {fileID: 381035499}
+  dialogueRetour: {fileID: 11400000, guid: 333ce2a8ee92a8e48b990924082fd781, type: 2}
 --- !u!4 &712144740
 Transform:
   m_ObjectHideFlags: 0
