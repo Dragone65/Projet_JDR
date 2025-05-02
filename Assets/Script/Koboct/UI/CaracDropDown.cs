@@ -89,7 +89,7 @@ namespace Koboct.UI
         private void RefreshOtherDropdowns()
         {
             // Find all instances of the CaracDropDown script
-            CaracDropDown[] dropdowns = FindObjectsOfType<CaracDropDown>();
+            CaracDropDown[] dropdowns = Object.FindObjectsByType<CaracDropDown>(FindObjectsSortMode.None);
             bool atLeastOneDropdownFound = false;
             foreach (CaracDropDown dropdown in dropdowns)
             {

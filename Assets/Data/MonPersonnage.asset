@@ -60,47 +60,47 @@ MonoBehaviour:
   _age: 0
   _caracteristiques:
   - _monType: 1
-    _valeur: 12
-    _modificateur: 1
+    _valeur: 0
+    _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 2
-    _valeur: 16
-    _modificateur: 3
+    _valeur: 0
+    _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 3
-    _valeur: 15
-    _modificateur: 2
+    _valeur: 0
+    _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 4
-    _valeur: 11
+    _valeur: 0
     _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 5
-    _valeur: 10
+    _valeur: 0
     _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 6
-    _valeur: 13
-    _modificateur: 1
+    _valeur: 0
+    _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
-  _race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
+  _race: {fileID: 0}
   _profil: {fileID: 0}
   _deDePointDeVie: 0
   _pointDeVie: 0
   _equipements: []
-  Voie1: {fileID: 11400000, guid: 13d2ddeee51778343bf9d7e7264e8ff8, type: 2}
+  Voie1: {fileID: 0}
   Voie2: {fileID: 0}
   Voie3: {fileID: 0}
   _bourse: 0
@@ -108,8 +108,6 @@ MonoBehaviour:
   _modAttaqueContact: 0
   _modAttaqueDistance: 0
   _modAttaqueMagique: 0
-  _profilMagicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
-  _profilPretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
 --- !u!114 &1495243927082252537
 MonoBehaviour:
   m_ObjectHideFlags: 0

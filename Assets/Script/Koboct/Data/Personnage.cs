@@ -32,8 +32,8 @@ namespace Koboct.Data
         [SerializeField] private int _modAttaqueContact;
         [SerializeField] private int _modAttaqueDistance;
         [SerializeField] private int _modAttaqueMagique;
-        [SerializeField] private Profil _profilMagicien;
-        [SerializeField] private Profil _profilPretre;
+        private Profil _profilMagicien;
+        private Profil _profilPretre;
 
         private void OnEnable()
         {
@@ -80,11 +80,6 @@ namespace Koboct.Data
             set => _race = value;
         }
 
-        public int GetCharacteristiqueValeur(TypeCharacteristique type)
-        {
-            get => _race;
-            set => _race = value;
-        }
 
         public Profil Profil
         {

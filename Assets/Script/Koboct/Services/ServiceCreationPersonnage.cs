@@ -125,39 +125,29 @@ namespace Koboct.Services
         private void RemoveAndAddCapacitiesToVoie(Voie sourceVoie, Voie targetVoie)
         {
             if (sourceVoie == null || targetVoie == null) return;
+
             foreach (var capacite in targetVoie.Capacites)
             {
 #if UNITY_EDITOR
-
                 UnityEditor.AssetDatabase.RemoveObjectFromAsset(capacite);
 #endif
             }
-#if UNITY_EDITOR
-            Debug.Log(sum);
-#endif
-            return sum >= 3;
-        }
-
 
             targetVoie.Capacites.Clear();
             foreach (var capacite in sourceVoie.Capacites)
             {
                 var capacitelone = Instantiate(capacite);
-
                 capacitelone.name = capacitelone.name.Replace("(Clone)", string.Empty);
+
 #if UNITY_EDITOR
-
-
                 UnityEditor.AssetDatabase.AddObjectToAsset(capacitelone, _monPersonnage);
                 UnityEditor.EditorUtility.SetDirty(capacitelone);
 #endif
                 targetVoie.Capacites.Add(capacitelone);
             }
 
-
 #if UNITY_EDITOR
             UnityEditor.EditorUtility.SetDirty(_monPersonnage);
-            // Save all changes to disk
             UnityEditor.AssetDatabase.SaveAssets();
 #endif
         }
@@ -196,6 +186,7 @@ namespace Koboct.Services
             UnityEditor.EditorUtility.SetDirty(_monPersonnage);
             // Save all changes to disk
             UnityEditor.AssetDatabase.SaveAssets();
+
 #endif
         // public void SetCharacteristique(TypeCharacteristique myCarac, int selectedValue)
         // {
@@ -215,5 +206,6 @@ namespace Koboct.Services
         //     _monPersonnage.Race.ApplyCharacteristiqueModificateur(_monPersonnage);
 
         // }
+        }
     }
-}
+}    

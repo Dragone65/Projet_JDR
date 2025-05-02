@@ -65,7 +65,7 @@ public class CombatManager : MonoBehaviour
             }
 
             // Déterminer le type de dés selon l'arme équipée
-            int diceType = playerStats.GetArmeEquipee() != null ? (int)playerStats.GetArmeEquipee().TypeDeDeDegats : 6;
+            int diceType = playerStats.GetArmeEquipee() != null ? (int)playerStats.GetArmeEquipee()._typeDeDeDegats : 6;
             int attackRoll = RollDice(20) + playerStats.GetModificateur(TypeCharacteristique.Force);
             int damage = 0;
 

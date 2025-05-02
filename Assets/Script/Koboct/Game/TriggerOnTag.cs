@@ -5,7 +5,7 @@ namespace Koboct.Game
 {
     public class TriggerOnTag : MonoBehaviour
     {
-        public string tag;
+        public string targetTag;
         public UnityEvent OnTriggerEnterEvent=new ();
         public UnityEvent OnTriggerExitEvent=new ();
 
@@ -16,8 +16,8 @@ namespace Koboct.Game
 
         private void OnTriggerEnter(Collider other)
         {
-           if (other.CompareTag(tag))
-               OnTriggerEnterEvent.Invoke();
+            if (other.CompareTag(targetTag))
+                OnTriggerEnterEvent.Invoke();
         }
 
         private void OnTriggerExit(Collider other)

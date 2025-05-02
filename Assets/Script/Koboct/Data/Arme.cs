@@ -13,9 +13,9 @@ namespace Koboct.Data
         [SerializeField] private bool _deuxMains;
 
         
-        [SerializeField] private TypeDeDe _typeDeDeDegats;
+        [SerializeField] public TypeDeDe _typeDeDeDegats;
         [Range(1,5)]
-        [SerializeField] private int _nbDeDeDegats;
-        [SerializeField] private TypeCaracteristique _modificateurDeDegats;
+        [SerializeField] public int _nbDeDeDegats;
+        [SerializeField] public TypeCaracteristique _modificateurDeDegats;
     }
 }
