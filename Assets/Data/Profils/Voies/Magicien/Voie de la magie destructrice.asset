@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: Voie de la magie destructrice
+  m_EditorClassIdentifier: 
+  _nom: "Voie de la \xF9agie destructrice"
+  _capacites:
+  - {fileID: 11400000, guid: a2b52434c0f1284438e01de05ac7a4c0, type: 2}
+  - {fileID: 11400000, guid: 4500b044625de2340b52b57cfb1fad67, type: 2}
+  - {fileID: 11400000, guid: a30391a1fe0aeb54da406974fdc9be60, type: 2}
+  - {fileID: 11400000, guid: c101101d7f83b204c8d0cbb95758a708, type: 2}

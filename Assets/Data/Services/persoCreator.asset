@@ -14,4 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monPersonnage: {fileID: 11400000, guid: e460ffbfb934a5a458ce37a35ce365f3, type: 2}
   _monServiceDeLanceDeDe: {fileID: 11400000, guid: e1d95a5663b1bfd44884bd365e66852b, type: 2}
-  _monResultatJetCharacteristique: 100000000c0000000d00000009000000080000000c000000
+  _monResultatJetCharacteristique: 
+  ListeRacesDisponible: []
+  ListeProfilsDisponible: []

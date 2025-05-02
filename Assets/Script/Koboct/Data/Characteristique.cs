@@ -8,8 +8,8 @@ namespace Koboct.Data
     public class Characteristique
     {
         [SerializeField] private TypeCharacteristique _monType;
-        [Range(0, 21)] [SerializeField] private int _valeur;
-        [Range(-4, 5)] [SerializeField] private int _modificateur;
+        [Range(0, 21)][SerializeField] private int _valeur;
+        [Range(-4, 5)][SerializeField] private int _modificateur;
         public UnityEvent<int> OnValeurChange = new();
 
         public TypeCharacteristique MonType
@@ -23,9 +23,9 @@ namespace Koboct.Data
             set
             {
                 if (_valeur == value) return;
-                OnValeurChange.Invoke(value);
                 _valeur = value;
                 _modificateur = CalculModificateur(_valeur);
+                OnValeurChange.Invoke(_valeur);
             }
 
             get => _valeur;

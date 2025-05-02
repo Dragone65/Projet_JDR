@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
+  m_Name: "Voie du d\xE9placement"
+  m_EditorClassIdentifier: 
+  _nom: "Voie du d\xE9placement"
+  _capacites:
+  - {fileID: 11400000, guid: cbaef2b4ff24ff342bdf95cc1bf624b1, type: 2}
+  - {fileID: 11400000, guid: e6aa8db54aa65494e825c71ce1a49f49, type: 2}
+  - {fileID: 11400000, guid: 67c76fa3624af024e8bc1b9b065413eb, type: 2}
+  - {fileID: 11400000, guid: 3d8fbbb74ed66254b986b9db23fcee28, type: 2}

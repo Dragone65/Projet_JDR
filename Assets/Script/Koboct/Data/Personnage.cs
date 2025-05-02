@@ -31,7 +31,7 @@ namespace Koboct.Data
         [SerializeField] private int _modAttaqueMagique;
         [SerializeField] private Profil _profilMagicien;
         [SerializeField] private Profil _profilPretre;
-        
+
         private void OnEnable()
         {
             Reset();
@@ -53,23 +53,30 @@ namespace Koboct.Data
             _equipements.Clear();
             _bourse = 0;
             _pointDeDefense = 0;
-            _nom=string.Empty;
-            _nomJoueur=string.Empty;
-            _description=string.Empty;
-            _sexe=Genre.Neutre;
-            _taille=0;
-            _poids=0;
-            _age=0;
-            _modAttaqueDistance=0;
-            _modAttaqueContact=0;
-            _modAttaqueMagique=0;
+            _nom = string.Empty;
+            _nomJoueur = string.Empty;
+            _description = string.Empty;
+            _sexe = Genre.Neutre;
+            _taille = 0;
+            _poids = 0;
+            _age = 0;
+            _modAttaqueDistance = 0;
+            _modAttaqueContact = 0;
+            _modAttaqueMagique = 0;
         }
 
         public string NomJoueur
         {
             set => _nomJoueur = value;
         }
-        private int GetCharacteristiqueValeur(TypeCharacteristique type)
+
+        public Race Race
+        {
+            get => _race;
+            set => _race = value;
+        }
+
+        public int GetCharacteristiqueValeur(TypeCharacteristique type)
         {
             return GetCharacteristique(type).Valeur;
         }
@@ -79,7 +86,7 @@ namespace Koboct.Data
             return GetCharacteristique(type).Modificateur;
         }
 
-        private Characteristique GetCharacteristique(TypeCharacteristique type)
+        public Characteristique GetCharacteristique(TypeCharacteristique type)
         {
             return _characteristiques.First(car => car.MonType == type);
         }
@@ -104,7 +111,7 @@ namespace Koboct.Data
             _modAttaqueContact = GetCharacteristiqueModificateur(TypeCharacteristique.Force) + 1;
             _modAttaqueDistance = GetCharacteristiqueModificateur(TypeCharacteristique.Dexterite) + 1;
 
-            
+
             if (_profil == _profilMagicien)
                 _modAttaqueMagique = GetCharacteristiqueModificateur(TypeCharacteristique.Intelligence) + 1;
             else if (_profil == _profilPretre)
@@ -115,10 +122,10 @@ namespace Koboct.Data
 
         public void SetCharacterisicValue(TypeCharacteristique typeCharacteristique, int i)
         {
-            var characteristic = _characteristiques.FirstOrDefault(car => car.MonType == typeCharacteristique);
-            if (characteristic != null)
+            var caracteristic = _characteristiques.FirstOrDefault(car => car.MonType == typeCharacteristique);
+            if (caracteristic != null)
             {
-                characteristic.Valeur = i;
+                caracteristic.Valeur = i;
             }
         }
     }
