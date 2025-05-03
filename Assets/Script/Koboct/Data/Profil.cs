@@ -10,7 +10,7 @@ namespace Koboct.Data
 
         [SerializeField] private TypeDeDe _deDePointDeVie;
         [SerializeField] private List<Equipement> _equimentsDeBase = new();
-        [SerializeField] private int _argentDeDepart = 5;
+        [SerializeField] public int _argentDeDepart = 5;
 
         public TypeDeDe DeDePointDeVie
         {

@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
         {
             btn.onClick.AddListener(LancerCreationPersonnage);
         }
-        if (scene.name == "SampleScene")
+        if (scene.name == "FichePerso")
         {
             btn.onClick.AddListener(LancerDialogue);
         }
@@ -30,7 +30,7 @@ public class Menu : MonoBehaviour
     }
     public void LancerCreationPersonnage()
     {
-        SceneManager.LoadScene("SampleScene"); 
+        SceneManager.LoadScene("FichePerso"); 
     }
     public void LancerDialogue()
     {

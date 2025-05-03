@@ -15,7 +15,6 @@ namespace Koboct.UI
         public void LancerDeCarac()
         {
             _monService.LancerDeCaracteristiqueAvecValidation();
-           
         }
     }
 }

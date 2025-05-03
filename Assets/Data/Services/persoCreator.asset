@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _monPersonnage: {fileID: 11400000, guid: e460ffbfb934a5a458ce37a35ce365f3, type: 2}
   _monServiceDeLanceDeDe: {fileID: 11400000, guid: e1d95a5663b1bfd44884bd365e66852b, type: 2}
-  _monResultatJetCaracteristique: 
+  _monResultatJetCaracteristique: 110000000e0000000e0000000d0000000b0000000b000000
   ListeRacesDisponible:
   - {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
   - {fileID: 11400000, guid: 301f5671b538872409648ca58eb90373, type: 2}
@@ -23,4 +23,3 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
   - {fileID: 11400000, guid: ff99a9165799f2f4686f4710b519720e, type: 2}
   - {fileID: 11400000, guid: d2a0d4e6e446a3f4788c704b2d10bb06, type: 2}
-

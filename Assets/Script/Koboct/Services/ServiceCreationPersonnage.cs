@@ -4,6 +4,9 @@ using System.Linq;
 using Koboct.Data;
 using UnityEngine;
 using UnityEngine.Serialization;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 namespace Koboct.Services
 {
@@ -25,6 +28,16 @@ namespace Koboct.Services
 
         private void OnEnable()
         {
+#if UNITY_EDITOR
+            ListeRacesDisponible = AssetDatabase.FindAssets("t:Race")
+                .Select(guid => AssetDatabase.LoadAssetAtPath<Race>(AssetDatabase.GUIDToAssetPath(guid)))
+                .ToList();
+
+            ListeProfilsDisponible = AssetDatabase.FindAssets("t:Profil")
+                .Select(guid => AssetDatabase.LoadAssetAtPath<Profil>(AssetDatabase.GUIDToAssetPath(guid)))
+                .ToList();
+#endif
+
             Reset();
         }
 
@@ -39,6 +52,35 @@ namespace Koboct.Services
         {
             _monPersonnage.NomJoueur = nomJoueur;
         }
+        public void SetNomPersonnage(string nom)
+        {
+            _monPersonnage._nom = nom;
+        }
+
+        public void SetSexe(Genre sexe)
+        {
+            _monPersonnage._sexe = sexe;
+        }
+
+        public void SetAge(int age)
+        {
+            _monPersonnage._age = age;
+        }
+
+        public void SetPoids(int poids)
+        {
+            _monPersonnage._poids = poids;
+        }
+
+        public void SetTaille(int taille)
+        {
+            _monPersonnage._taille = taille;
+        }
+        public void SetDescription(string description)
+        {
+            _monPersonnage._description = description;
+        }
+
 
         private void Reset()
         {
@@ -48,13 +90,11 @@ namespace Koboct.Services
         [ContextMenu("Lancer Dé Caractèristique")]
         public void LancerDeCaracteristique()
         {
-            _monPersonnage.Reset();
             _monServiceDeLanceDeDe.LancerDesCaracteristiques(RetourResultatLancerCaracterisque);
         }
 
         public void LancerDeCaracteristiqueAvecValidation()
         {
-            _monPersonnage.Reset();
             _monServiceDeLanceDeDe.LancerDesCaracteristiques(RetourResultatLancerCaracterisqueValid);
 
         }
@@ -159,13 +199,18 @@ namespace Koboct.Services
             if (profil == null) return;
 
             _monPersonnage.Profil = profil;
+            _monPersonnage._deDePointDeVie = profil.DeDePointDeVie;
+            _monPersonnage._bourse = profil._argentDeDepart;
 
-            if (profil.Voies == null || profil.Voies.Count == 0) return;
+            // Affecter les voies du profil au personnage
+            _monPersonnage.Voie1 = profil.Voies.ElementAtOrDefault(0);
+            _monPersonnage.Voie2 = profil.Voies.ElementAtOrDefault(1);
+            _monPersonnage.Voie3 = profil.Voies.ElementAtOrDefault(2);
 
-            // Process each Voie and add capacities
-            RemoveAndAddCapacitiesToVoie(profil.Voies.ElementAtOrDefault(0), _monPersonnage.Voie1);
-            RemoveAndAddCapacitiesToVoie(profil.Voies.ElementAtOrDefault(1), _monPersonnage.Voie2);
-            RemoveAndAddCapacitiesToVoie(profil.Voies.ElementAtOrDefault(2), _monPersonnage.Voie3);
+            // Copier les capacités de chaque voie
+            RemoveAndAddCapacitiesToVoie(_monPersonnage.Voie1, _monPersonnage.Voie1);
+            RemoveAndAddCapacitiesToVoie(_monPersonnage.Voie2, _monPersonnage.Voie2);
+            RemoveAndAddCapacitiesToVoie(_monPersonnage.Voie3, _monPersonnage.Voie3);
 
             foreach (var equipement in profil.EquimentsDeBase)
             {

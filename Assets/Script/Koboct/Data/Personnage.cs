@@ -7,27 +7,24 @@ namespace Koboct.Data
     [CreateAssetMenu(fileName = "Personnage", menuName = "Personnage", order = 0)]
     public class Personnage : ScriptableObject
     {
-        [SerializeField] private string _nom;
-        [SerializeField] private string _nomJoueur;
+        [SerializeField] public string _nom;
+        [SerializeField] public string _nomJoueur;
         [TextArea(3, 10)]
-        [SerializeField] private string _description;
-        [SerializeField] private Genre _sexe;
-        [Range(0.5f, 2.5f)]
-        [SerializeField] private float _taille;
-        [Range(20, 150)]
-        [SerializeField] private float _poids;
-        [Range(20, 350)]
-        [SerializeField] private int _age;
+        [SerializeField] public string _description;
+        [SerializeField] public Genre _sexe;
+        [SerializeField] public int _taille;
+        [SerializeField] public int _poids;
+        [SerializeField] public int _age;
         [SerializeField] private List<Caracteristique> _caracteristiques = new();
         [SerializeField] private Race _race;
         [SerializeField] private Profil _profil;
-        [SerializeField] private TypeDeDe _deDePointDeVie;
+        [SerializeField] public TypeDeDe _deDePointDeVie;
         [SerializeField] private int _pointDeVie;
         [SerializeField] private List<Equipement> _equipements = new();
         [SerializeField] public Voie Voie1;  
         [SerializeField] public Voie Voie2; 
         [SerializeField] public Voie Voie3;
-        [SerializeField] private int _bourse;
+        [SerializeField] public int _bourse;
         [SerializeField] private int _pointDeDefense;
         [SerializeField] private int _modAttaqueContact;
         [SerializeField] private int _modAttaqueDistance;
@@ -54,6 +51,9 @@ namespace Koboct.Data
             _deDePointDeVie = 0;
             _pointDeVie = 0;
             _equipements.Clear();
+            Voie1 = null;
+            Voie2 = null;
+            Voie3 = null;
             _bourse = 0;
             _pointDeDefense = 0;
             _nom = string.Empty;
@@ -167,10 +167,11 @@ namespace Koboct.Data
         }
     }
 
-    internal enum Genre
+    public enum Genre
     {
+        Neutre,
         Masculin,
-        Feminin,
-        Neutre
+        Feminin
+        
     }
 }
