@@ -15,22 +15,22 @@ namespace Koboct.Data
         [SerializeField] public int _taille;
         [SerializeField] public int _poids;
         [SerializeField] public int _age;
-        [SerializeField] private List<Caracteristique> _caracteristiques = new();
-        [SerializeField] private Race _race;
-        [SerializeField] private Profil _profil;
+        [SerializeField] public List<Caracteristique> _caracteristiques = new();
+        [SerializeField] public Race _race;
+        [SerializeField] public Profil _profil;
         [SerializeField] public TypeDeDe _deDePointDeVie;
-        [SerializeField] private int _pointDeVie;
-        [SerializeField] private List<Equipement> _equipements = new();
+        [SerializeField] public int _pointDeVie;
+        [SerializeField] public List<Equipement> _equipements = new();
         [SerializeField] public Voie Voie1;  
         [SerializeField] public Voie Voie2; 
         [SerializeField] public Voie Voie3;
         [SerializeField] public int _bourse;
-        [SerializeField] private int _pointDeDefense;
-        [SerializeField] private int _modAttaqueContact;
-        [SerializeField] private int _modAttaqueDistance;
-        [SerializeField] private int _modAttaqueMagique;
-        private Profil _profilMagicien;
-        private Profil _profilPretre;
+        [SerializeField] public int _pointDeDefense;
+        [SerializeField] public int _modAttaqueContact;
+        [SerializeField] public int _modAttaqueDistance;
+        [SerializeField] public int _modAttaqueMagique;
+        [SerializeField] private Profil _Magicien;
+        [SerializeField] private Profil _Pretre;
 
         private void OnEnable()
         {
@@ -88,7 +88,6 @@ namespace Koboct.Data
         }
 
         public List<Equipement> Equipements
-        // public Characteristique GetCharacteristique(TypeCharacteristique type)
         {
             get => _equipements;
             set => _equipements = value;
@@ -110,29 +109,28 @@ namespace Koboct.Data
         }
 
         [ContextMenu("Calculer les points de vies")]
-        private void CalculPointDeVie()
+        public void CalculPointDeVie()
         {
-            _deDePointDeVie = Profil.DeDePointDeVie;
             _pointDeVie = (int)_deDePointDeVie + GetCaracteristiqueModificateur(TypeCaracteristique.Constitution);
         }
 
         [ContextMenu("Calculer les points de défense")]
-        private void CalculPointDeDefense()
+        public void CalculPointDeDefense()
         {
             _pointDeDefense = 10 + GetCaracteristiqueModificateur(TypeCaracteristique.Dexterite) +
                               _equipements.OfType<Protection>().Sum(protection => protection.ModificateurDArmure);
         }
 
         [ContextMenu("Calculer les mod. d'attaque")]
-        private void CalculModDAttaque()
+        public void CalculModDAttaque()
         {
             _modAttaqueContact = GetCaracteristiqueModificateur(TypeCaracteristique.Force) + 1;
             _modAttaqueDistance = GetCaracteristiqueModificateur(TypeCaracteristique.Dexterite) + 1;
 
 
-            if (_profil == _profilMagicien)
+            if (_profil == _Magicien)
                 _modAttaqueMagique = GetCaracteristiqueModificateur(TypeCaracteristique.Intelligence) + 1;
-            else if (_profil == _profilPretre)
+            else if (_profil == _Pretre)
                 _modAttaqueMagique = GetCaracteristiqueModificateur(TypeCaracteristique.Sagesse) + 1;
             else
                 _modAttaqueMagique = 0;
