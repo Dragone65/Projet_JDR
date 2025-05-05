@@ -32,6 +32,8 @@ namespace Koboct.Data
         [SerializeField] private Profil _Magicien;
         [SerializeField] private Profil _Pretre;
 
+        [SerializeField] public bool _complete;
+
         private void OnEnable()
         {
             Reset();
@@ -66,6 +68,7 @@ namespace Koboct.Data
             _modAttaqueDistance = 0;
             _modAttaqueContact = 0;
             _modAttaqueMagique = 0;
+            _complete = false;
         }
 
         public string NomJoueur

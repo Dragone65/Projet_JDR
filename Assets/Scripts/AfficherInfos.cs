@@ -50,81 +50,85 @@ public class AfficherInfos : MonoBehaviour
     [SerializeField] private TextMeshProUGUI Inventaire9;
     [SerializeField] private TextMeshProUGUI Inventaire10;
 
-
-    public void AffichageInfos()
+    public void Update()
     {
-        Niveau.text = "1";
-        DéDeVie.text = _personnage._deDePointDeVie.ToString();
-        AttaqueContact.text = _personnage._modAttaqueContact.ToString();
-        AttaqueDistance.text = _personnage._modAttaqueDistance.ToString();
-        AttaqueMagique.text = _personnage._modAttaqueMagique.ToString();
-        Pv.text = _personnage._pointDeVie.ToString();
-        Defense.text = _personnage._pointDeDefense.ToString();
-        Bourse.text = _personnage._bourse.ToString();
-
-        // Voies
-        Voie1.text = _personnage.Voie1?.name;
-        Voie2.text = _personnage.Voie2?.name;
-        Voie3.text = _personnage.Voie3?.name;
-
-        // Capacités des voies
-        List<TextMeshProUGUI> voieTexts = new() { Capacite11, Capacite12, Capacite13, Capacite14 };
-        for (int i = 0; i < _personnage.Voie1?.Capacites.Count && i < 4; i++)
-            voieTexts[i].text = _personnage.Voie1.Capacites[i].name;
-
-        voieTexts = new() { Capacite21, Capacite22, Capacite23, Capacite24 };
-        for (int i = 0; i < _personnage.Voie2?.Capacites.Count && i < 4; i++)
-            voieTexts[i].text = _personnage.Voie2.Capacites[i].name;
-
-        voieTexts = new() { Capacite31, Capacite32, Capacite33, Capacite34 };
-        for (int i = 0; i < _personnage.Voie3?.Capacites.Count && i < 4; i++)
-            voieTexts[i].text = _personnage.Voie3.Capacites[i].name;
-
-        // Traitement des équipements
-        List<Equipement> equipements = _personnage._equipements;
-        List<Arme> armes = new();
-        List<Protection> protections = new();
-
-        foreach (var e in equipements)
+        if (_personnage._complete == true)
         {
-            if (e is Arme arme) armes.Add(arme);
-            else if (e is Protection protection) protections.Add(protection);
-        }
+            Niveau.text = "1";
+            DéDeVie.text = _personnage._deDePointDeVie.ToString();
+            AttaqueContact.text = _personnage._modAttaqueContact.ToString();
+            AttaqueDistance.text = _personnage._modAttaqueDistance.ToString();
+            AttaqueMagique.text = _personnage._modAttaqueMagique.ToString();
+            Pv.text = _personnage._pointDeVie.ToString();
+            Defense.text = _personnage._pointDeDefense.ToString();
+            Bourse.text = _personnage._bourse.ToString();
 
-        // Affichage armes
-        if (armes.Count > 0)
-        {
-            Arme1.text = armes[0].name;
-            DegatsArme1.text = armes[0]._typeDeDeDegats.ToString();
-        }
-        if (armes.Count > 1)
-        {
-            Arme2.text = armes[1].name;
-            DegatsArme2.text = armes[1]._typeDeDeDegats.ToString();
-        }
+            Voie1.text = _personnage.Voie1?.name;
+            Voie2.text = _personnage.Voie2?.name;
+            Voie3.text = _personnage.Voie3?.name;
 
-        // Affichage protections
-        if (protections.Count > 0)
-        {
-            Armure1.text = protections[0].name;
-            ModArmure1.text = protections[0].ModificateurDArmure.ToString();
-        }
-        if (protections.Count > 1)
-        {
-            Armure2.text = protections[1].name;
-            ModArmure2.text = protections[1].ModificateurDArmure.ToString();
-        }
+            List<TextMeshProUGUI> voieTexts = new() { Capacite11, Capacite12, Capacite13, Capacite14 };
+            for (int i = 0; i < _personnage.Voie1?.Capacites.Count && i < 4; i++)
+                voieTexts[i].text = _personnage.Voie1.Capacites[i].name;
 
-        // Inventaire général
-        List<TextMeshProUGUI> inventaireFields = new()
-    {
-        Inventaire1, Inventaire2, Inventaire3, Inventaire4, Inventaire5,
-        Inventaire6, Inventaire7, Inventaire8, Inventaire9, Inventaire10
-    };
+            voieTexts = new() { Capacite21, Capacite22, Capacite23, Capacite24 };
+            for (int i = 0; i < _personnage.Voie2?.Capacites.Count && i < 4; i++)
+                voieTexts[i].text = _personnage.Voie2.Capacites[i].name;
 
-        for (int i = 0; i < equipements.Count && i < inventaireFields.Count; i++)
-        {
-            inventaireFields[i].text = equipements[i].name;
+            voieTexts = new() { Capacite31, Capacite32, Capacite33, Capacite34 };
+            for (int i = 0; i < _personnage.Voie3?.Capacites.Count && i < 4; i++)
+                voieTexts[i].text = _personnage.Voie3.Capacites[i].name;
+
+            List<Equipement> equipements = _personnage._equipements;
+            List<Arme> armes = new();
+            List<Protection> protections = new();
+
+            foreach (var e in equipements)
+            {
+                if (e is Arme arme) armes.Add(arme);
+                else if (e is Protection protection) protections.Add(protection);
+            }
+
+            if (armes.Count > 0)
+            {
+                Arme1.text = armes[0].name;
+                DegatsArme1.text = armes[0]._typeDeDeDegats.ToString();
+            }
+            if (armes.Count > 1)
+            {
+                Arme2.text = armes[1].name;
+                DegatsArme2.text = armes[1]._typeDeDeDegats.ToString();
+            }
+
+            if (protections.Count > 0)
+            {
+                Armure1.text = protections[0].name;
+                ModArmure1.text = protections[0].ModificateurDArmure.ToString();
+            }
+            if (protections.Count > 1)
+            {
+                Armure2.text = protections[1].name;
+                ModArmure2.text = protections[1].ModificateurDArmure.ToString();
+            }
+
+            List<TextMeshProUGUI> inventaireFields = new()
+            {
+                Inventaire1, Inventaire2, Inventaire3, Inventaire4, Inventaire5,
+                Inventaire6, Inventaire7, Inventaire8, Inventaire9, Inventaire10
+            };
+
+            List<Equipement> objetsInventaire = new();
+            foreach (var e in equipements)
+            {
+                if (e is not Arme && e is not Protection)
+                    objetsInventaire.Add(e);
+            }
+
+            for (int i = 0; i < objetsInventaire.Count && i < inventaireFields.Count; i++)
+            {
+                inventaireFields[i].text = objetsInventaire[i].name;
+            }
         }
     }
 }
+

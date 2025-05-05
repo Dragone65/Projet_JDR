@@ -229,7 +229,7 @@ namespace Koboct.Services
 
             if (raceOk && profilOk && caracsOk)
             {
-                _afficher.AffichageInfos();
+                _monPersonnage._complete = true;
             }
             
 
