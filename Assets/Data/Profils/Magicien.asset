@@ -13,20 +13,17 @@ MonoBehaviour:
   m_Name: Magicien
   m_EditorClassIdentifier: 
   _nom: Magicien
-
   _voies:
   - {fileID: 11400000, guid: 431c57cbb3498ef478a5ed7077e72da2, type: 2}
   - {fileID: 11400000, guid: 4cba4b2df8028704b8cd499c83090d11, type: 2}
   - {fileID: 11400000, guid: c613082a7f192b549b07af62d00f73e2, type: 2}
   _deDePointDeVie: 4
   _equimentsDeBase:
+  - {fileID: 11400000, guid: 2c9ea0facb284304f822bd9a21cac0ec, type: 2}
   - {fileID: 11400000, guid: 7f5b72f734dafd6429327bec1bf72d20, type: 2}
-  - {fileID: 11400000, guid: 47d4b1e6ed5c1544db675f7c3c78a0fb, type: 2}
   - {fileID: 11400000, guid: d285022a8cbb3a446b34704886b8b0bd, type: 2}
+  - {fileID: 11400000, guid: 47d4b1e6ed5c1544db675f7c3c78a0fb, type: 2}
   - {fileID: 11400000, guid: f3c2ac4cefa80f54cb3aec5a7c7cbd6e, type: 2}
   - {fileID: 11400000, guid: 1a48ce9fb13df4c43b48047d6afa48dd, type: 2}
   - {fileID: 11400000, guid: 2f477653261591944b6cc29d5cca4552, type: 2}
-  - {fileID: 11400000, guid: 2c9ea0facb284304f822bd9a21cac0ec, type: 2}
-
-  - {fileID: 11400000, guid: c2d9f0141648c4c4abbbb69203dbe343, type: 2}
   _argentDeDepart: 5
