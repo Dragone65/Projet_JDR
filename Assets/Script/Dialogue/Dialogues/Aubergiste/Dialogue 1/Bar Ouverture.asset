@@ -1,0 +1,49 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66dc4013cb5352409411aa2f5bb6b5e, type: 3}
+  m_Name: Bar Ouverture
+  m_EditorClassIdentifier: 
+  textePNJ: Bonjour ! En quoi puis-je vous aider ?
+  options:
+  - texteJoueur: Demander des rumeurs ou infos locale.
+    testCaracteristique: 4
+    difficulteTest: 10
+    seuilMoyen: 5
+    reponseReussite: {fileID: 11400000, guid: c5ed3035e8ce2524e9a7b7ae066f173f, type: 2}
+    reponseMoyen: {fileID: 11400000, guid: be49b33e872db574f971ce0d74216bb4, type: 2}
+    reponseEchec: {fileID: 11400000, guid: 5a7abdb28f7211147b8e92b8388a53a8, type: 2}
+    sceneSuivante: 
+  - texteJoueur: "Tenter de n\xE9gocier un rabais."
+    testCaracteristique: 6
+    difficulteTest: 15
+    seuilMoyen: 10
+    reponseReussite: {fileID: 11400000, guid: 1c2b35f4e097fff4f8b6ea601e3d50ae, type: 2}
+    reponseMoyen: {fileID: 11400000, guid: a5bd8b73b8952fe4eb972d479ad1652b, type: 2}
+    reponseEchec: {fileID: 11400000, guid: 236cabaead707924f9a9b2e715e435b7, type: 2}
+    sceneSuivante: 
+  - texteJoueur: "Distraire l\u2019aubergiste et voler quelque chose sur le bar."
+    testCaracteristique: 2
+    difficulteTest: 15
+    seuilMoyen: 10
+    reponseReussite: {fileID: 0}
+    reponseMoyen: {fileID: 0}
+    reponseEchec: {fileID: 0}
+    sceneSuivante: 
+  - texteJoueur: "Boire un verre d\u2019alcool."
+    testCaracteristique: 3
+    difficulteTest: 16
+    seuilMoyen: 12
+    reponseReussite: {fileID: 11400000, guid: 0819b18c9304213479f98f411a5a69fb, type: 2}
+    reponseMoyen: {fileID: 11400000, guid: 45889b92b82852440839a01277fe3839, type: 2}
+    reponseEchec: {fileID: 11400000, guid: fc59a754a9408da4c86d76567dd7b4b4, type: 2}
+    sceneSuivante: 
+  reactions: []
