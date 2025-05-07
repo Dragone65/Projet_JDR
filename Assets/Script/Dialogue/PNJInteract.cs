@@ -5,14 +5,10 @@ public class PNJInteract : MonoBehaviour
 {
     public Dialogue dialogue;
     private Collider pnjCollider;
-    private CharacterStats playerStats;
+    public Personnage joueurPersonnage;
 
     void Start()
     {
-        GameObject joueur = GameObject.FindGameObjectWithTag("Player");
-        if (joueur != null)
-            playerStats = joueur.GetComponent<CharacterStats>();
-
         DialogueManager.Instance.OnDialogueStart += DesactiverPNJ;
         DialogueManager.Instance.OnDialogueEnd += ActiverPNJ;
     }
@@ -27,7 +23,7 @@ public class PNJInteract : MonoBehaviour
     {
         if (!DialogueManager.Instance.EstDialogueOuvert())
         {
-            DialogueManager.Instance.CommencerDialogue(dialogue, playerStats);
+            DialogueManager.Instance.CommencerDialogue(dialogue, joueurPersonnage);
         }
     }
 

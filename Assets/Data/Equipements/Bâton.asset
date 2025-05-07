@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
   m_Name: "B\xE2ton"
   m_EditorClassIdentifier: 
-  _nom: Baton
+  _nom: "B\xE2ton"
   _prix: 1
   _icon: {fileID: 21300000, guid: 752aaf2252cbcd54595f181d4ff12e46, type: 3}
   _prefab: {fileID: 0}

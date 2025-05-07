@@ -267,7 +267,6 @@ GameObject:
   - component: {fileID: 381035497}
   - component: {fileID: 381035496}
   - component: {fileID: 381035495}
-  - component: {fileID: 381035499}
   m_Layer: 0
   m_Name: Ennemi
   m_TagString: Untagged
@@ -366,59 +365,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &381035499
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 381035494}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5967ee04f7e6d6742adbb6b91977e3cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characteristiques:
-  - _monType: 1
-    _valeur: 14
-    _modificateur: 2
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 2
-    _valeur: 14
-    _modificateur: 2
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 3
-    _valeur: 15
-    _modificateur: 2
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 4
-    _valeur: 13
-    _modificateur: 1
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 5
-    _valeur: 8
-    _modificateur: -1
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 6
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
-  _inventaire: []
-  _armeEquipee: {fileID: 0}
-  _armureEquipee: {fileID: 11400000, guid: 5d42fc59174d41d4789484158c3085ab, type: 2}
 --- !u!1 &393638349
 GameObject:
   m_ObjectHideFlags: 0
@@ -824,7 +770,6 @@ GameObject:
   - component: {fileID: 616523151}
   - component: {fileID: 616523150}
   - component: {fileID: 616523149}
-  - component: {fileID: 616523153}
   m_Layer: 0
   m_Name: Joueur
   m_TagString: Untagged
@@ -923,59 +868,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &616523153
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 616523148}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5967ee04f7e6d6742adbb6b91977e3cc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _characteristiques:
-  - _monType: 1
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 2
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 3
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 4
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 5
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  - _monType: 6
-    _valeur: 10
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
-  race: {fileID: 0}
-  _inventaire: []
-  _armeEquipee: {fileID: 11400000, guid: f2bf8b898f3930c4abca55e6b4d20fee, type: 2}
-  _armureEquipee: {fileID: 11400000, guid: 5d42fc59174d41d4789484158c3085ab, type: 2}
 --- !u!1 &712144738
 GameObject:
   m_ObjectHideFlags: 0
@@ -1012,10 +904,12 @@ MonoBehaviour:
   inventoryButton: {fileID: 1029280190}
   fleeButton: {fileID: 539803833}
   playerDefenseText: {fileID: 1411629002}
+  ennemiDefenseText: {fileID: 1909445549}
   inventoryPanel: {fileID: 0}
   inventoryContainer: {fileID: 0}
   itemButtonPrefab: {fileID: 0}
-  enemyStats: {fileID: 381035499}
+  joueurPersonnage: {fileID: 11400000, guid: e460ffbfb934a5a458ce37a35ce365f3, type: 2}
+  ennemiPersonnage: {fileID: 11400000, guid: 1e05c5ec68441654d96a7800b8ea2ed5, type: 2}
   dialogueRetour: {fileID: 11400000, guid: 333ce2a8ee92a8e48b990924082fd781, type: 2}
 --- !u!4 &712144740
 Transform:

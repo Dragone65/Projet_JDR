@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d0381f11ae801f4a9451f815e8ca4fe, type: 3}
+  m_Name: MonEnnemi
+  m_EditorClassIdentifier: 
+  _nom: "S\xE9raphin de Valcroix"
+  _description: "Je suis S\xE9raphin de Valcroix, Inquisiteur G\xE9n\xE9ral de la
+    Sainte Ordonnance de l\u2019\xC9pine,\r\nH\xE9ritier des Manuscrits de Solamh,
+    Gardien du Verbe \xC9carlate et Purificateur du b\xFBcher de Charnemire.\r\nJ\u2019ai
+    si\xE9g\xE9 au Concile de Luthnar, bris\xE9 les h\xE9r\xE9tiques de la Marche
+    Noire,\r\net men\xE9 la P\xE9nitence Rouge jusqu\u2019aux portes de Beldan.\r\nPar
+    d\xE9cret du Tr\xE8s-Haut, par volont\xE9 du Tr\xF4ne et par la lame qui me fut
+    confi\xE9e,\r\nje suis ici pour juger votre \xE2me. Parlez avec droiture\u2026
+    ou br\xFBlez avec vos mensonges.\r\nEn quoi puis-je vous aider ?"
+  _sexe: 0
+  _taille: 185
+  _poids: 92
+  _age: 63
+  _caracteristiques:
+  - _monType: 1
+    _valeur: 14
+    _modificateur: 2
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 2
+    _valeur: 14
+    _modificateur: 2
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 3
+    _valeur: 17
+    _modificateur: 3
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 4
+    _valeur: 9
+    _modificateur: -1
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 5
+    _valeur: 11
+    _modificateur: 1
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 6
+    _valeur: 21
+    _modificateur: 5
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  _race: {fileID: 11400000, guid: 8836b43d0d14d30439f64cf3b995fd31, type: 2}
+  _profil: {fileID: 11400000, guid: 9189befad8fc00c4fafec221b8c6dc3d, type: 2}
+  _deDePointDeVie: 12
+  _pointDeVie: 15
+  _equipements:
+  - {fileID: 11400000, guid: b264c56531a565a4b9e110b291cc3de2, type: 2}
+  - {fileID: 11400000, guid: f2bf8b898f3930c4abca55e6b4d20fee, type: 2}
+  - {fileID: 11400000, guid: d01a16b9fd039ec49b562105a12a910d, type: 2}
+  Voie1: {fileID: 0}
+  Voie2: {fileID: 0}
+  Voie3: {fileID: 0}
+  _bourse: 0
+  _pointDeDefense: 19
+  _modAttaqueContact: 3
+  _modAttaqueDistance: 3
+  _modAttaqueMagique: 0
+  _Magicien: {fileID: 0}
+  _Pretre: {fileID: 0}
+  _complete: 1

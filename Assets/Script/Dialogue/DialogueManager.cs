@@ -19,7 +19,7 @@ public class DialogueManager : MonoBehaviour
     public event Action OnDialogueEnd;   // Événement pour réactiver les PNJ
 
     private Dialogue dialogueActuel;
-    private CharacterStats playerStats;
+    public Personnage joueurPersonnage;
     private bool peutQuitter = false;
 
     void Awake()
@@ -34,16 +34,16 @@ public class DialogueManager : MonoBehaviour
         Debug.Log("Dialogue récupéré : " + dialogue);
         if (dialogue != null)
         {
-            CommencerDialogue(dialogue, GameManager.Instance.playerStats);
+            CommencerDialogue(dialogue, joueurPersonnage);
         }
     }
 
-    public void CommencerDialogue(Dialogue dialogue, CharacterStats stats)
+    public void CommencerDialogue(Dialogue dialogue, Personnage joueur)
     {
         if (dialoguePanel.activeSelf) return; // Empêche d'ouvrir un dialogue si un autre est actif
 
         dialogueActuel = dialogue;
-        playerStats = stats;
+        joueurPersonnage = joueur;
         dialoguePanel.SetActive(true);
         peutQuitter = false;
         OnDialogueStart?.Invoke(); // Désactive les PNJ pendant le dialogue
@@ -59,7 +59,7 @@ public class DialogueManager : MonoBehaviour
     {
         foreach (ReactionsOption reaction in dialogueActuel.reactions)
         {
-            if (playerStats.GetRace() == reaction.raceCible)
+            if (joueurPersonnage._race == reaction.raceCible)
             {
                 dialogueActuel = reaction.reactionRace;
                 break;
@@ -89,8 +89,8 @@ public class DialogueManager : MonoBehaviour
     {
         if (option.testCaracteristique != TypeCharacteristique.Aucune)
         {
-            int jet = UnityEngine.Random.Range(1, 20) + playerStats.GetModificateur(option.testCaracteristique);
 
+            int jet = UnityEngine.Random.Range(1, 21) + joueurPersonnage.GetCaracteristiqueModificateur(option.testCaracteristique);
             if (jet >= option.difficulteTest)
             {
                 dialogueActuel = option.reponseReussite;

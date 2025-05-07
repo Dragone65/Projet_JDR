@@ -6,8 +6,7 @@ public class GameManager : MonoBehaviour
     public static GameManager Instance;
 
     public Dialogue dialogueAPresenter;
-    public CharacterStats playerStats;
-    public CharacterStats Joueur => GameObject.FindGameObjectWithTag("Player")?.GetComponent<CharacterStats>();
+    public Personnage playerStats;
 
     void Awake()
     {

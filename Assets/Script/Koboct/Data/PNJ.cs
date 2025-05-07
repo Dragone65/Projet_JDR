@@ -5,11 +5,10 @@ using UnityEngine;
 
 namespace Koboct.Data
 {
-    [CreateAssetMenu(fileName = "Personnage", menuName = "Personnage", order = 0)]
-    public class Personnage : ScriptableObject
+    [CreateAssetMenu(fileName = "PNJ", menuName = "PNJ", order = 0)]
+    public class PNJ : ScriptableObject
     {
         [SerializeField] public string _nom;
-        [SerializeField] public string _nomJoueur;
         [TextArea(3, 10)]
         [SerializeField] public string _description;
         [SerializeField] public Genre _sexe;
@@ -22,8 +21,8 @@ namespace Koboct.Data
         [SerializeField] public TypeDeDe _deDePointDeVie;
         [SerializeField] public int _pointDeVie;
         [SerializeField] public List<Equipement> _equipements = new();
-        [SerializeField] public Voie Voie1;  
-        [SerializeField] public Voie Voie2; 
+        [SerializeField] public Voie Voie1;
+        [SerializeField] public Voie Voie2;
         [SerializeField] public Voie Voie3;
         [SerializeField] public int _bourse;
         [SerializeField] public int _pointDeDefense;
@@ -35,47 +34,8 @@ namespace Koboct.Data
 
         [SerializeField] public bool _complete;
 
-        private void OnEnable()
-        {
-            Reset();
-        }
-
-        public void Reset()
-        {
-            _caracteristiques.Clear();
-            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Force });
-            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Dexterite });
-            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Constitution });
-            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Intelligence });
-            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Sagesse });
-            _caracteristiques.Add(new Caracteristique { MonType = TypeCaracteristique.Charisme });
-            _race = null;
-            _profil = null;
-            _deDePointDeVie = 0;
-            _pointDeVie = 0;
-            _equipements.Clear();
-            Voie1 = null;
-            Voie2 = null;
-            Voie3 = null;
-            _bourse = 0;
-            _pointDeDefense = 0;
-            _nom = string.Empty;
-            _nomJoueur = string.Empty;
-            _description = string.Empty;
-            _sexe = Genre.Neutre;
-            _taille = 0;
-            _poids = 0;
-            _age = 0;
-            _modAttaqueDistance = 0;
-            _modAttaqueContact = 0;
-            _modAttaqueMagique = 0;
-            _complete = false;
-        }
-
-        public string NomJoueur
-        {
-            set => _nomJoueur = value;
-        }
+        public List<Arme> armes = new();
+        public List<Protection> protections = new();
 
         public Race Race
 
@@ -158,7 +118,7 @@ namespace Koboct.Data
 
 
                 UnityEditor.AssetDatabase.RemoveObjectFromAsset(equipement);
-                
+
 
             }
 
@@ -172,13 +132,7 @@ namespace Koboct.Data
         {
             throw new NotImplementedException();
         }
-    }
 
-    public enum Genre
-    {
-        Neutre,
-        Masculin,
-        Feminin
-        
-    }
+}
+
 }

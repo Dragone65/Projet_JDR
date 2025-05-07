@@ -7,8 +7,8 @@ namespace Koboct.Data
     [Serializable]
     public class Arme : Equipement
     {
-        [SerializeField] private bool _contact;
-        [SerializeField] private bool _distance;
+        [SerializeField] public bool _contact;
+        [SerializeField] public bool _distance;
         [SerializeField] private bool _uneMain;
         [SerializeField] private bool _deuxMains;
 

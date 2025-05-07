@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 6d0381f11ae801f4a9451f815e8ca4fe
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - _race: {instanceID: 0}
+  - _profil: {instanceID: 0}
+  - _profilMagicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
+  - _profilPretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
