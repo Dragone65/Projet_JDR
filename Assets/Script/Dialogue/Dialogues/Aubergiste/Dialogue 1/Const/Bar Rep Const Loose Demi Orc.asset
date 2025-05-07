@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66dc4013cb5352409411aa2f5bb6b5e, type: 3}
   m_Name: Bar Rep Const Loose Demi Orc
   m_EditorClassIdentifier: 
-  textePNJ: "Ha ! Je croyais que vous \xE9tiez r\xE9sistants, vous autres !"
+  textePNJ: "Ha ! Je croyais que vous \xE9tiez r\xE9sistants, vous autres !\n(vous
+    perdez 2 de Dexterit\xE9)"
   options: []
   reactions: []

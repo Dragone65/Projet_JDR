@@ -32,11 +32,11 @@ MonoBehaviour:
     sceneSuivante: 
   - texteJoueur: "Distraire l\u2019aubergiste et voler quelque chose sur le bar."
     testCaracteristique: 2
-    difficulteTest: 15
-    seuilMoyen: 10
-    reponseReussite: {fileID: 0}
-    reponseMoyen: {fileID: 0}
-    reponseEchec: {fileID: 0}
+    difficulteTest: 13
+    seuilMoyen: 9
+    reponseReussite: {fileID: 11400000, guid: 8a368cdc9c0daa5448086acef93ee130, type: 2}
+    reponseMoyen: {fileID: 11400000, guid: be666778e3e689748a4796661b684def, type: 2}
+    reponseEchec: {fileID: 11400000, guid: c1e186bddd53b24469e317650b8bc5d0, type: 2}
     sceneSuivante: 
   - texteJoueur: "Boire un verre d\u2019alcool."
     testCaracteristique: 3

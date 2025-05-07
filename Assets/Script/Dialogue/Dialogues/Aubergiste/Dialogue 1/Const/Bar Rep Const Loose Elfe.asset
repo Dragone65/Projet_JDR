@@ -12,6 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f66dc4013cb5352409411aa2f5bb6b5e, type: 3}
   m_Name: Bar Rep Const Loose Elfe
   m_EditorClassIdentifier: 
-  textePNJ: "Eh ben\u2026 c\u2019est pas du vin de Laurelorn ici, hein ?"
+  textePNJ: "Eh ben\u2026 c\u2019est pas du vin de Laurelorn ici, hein \n(vous perdez
+    2 de Dexterit\xE9)"
   options: []
   reactions: []
