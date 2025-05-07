@@ -221,6 +221,29 @@ MonoBehaviour:
   _typeDeDeDegats: 4
   _nbDeDeDegats: 1
   _modificateurDeDegats: 0
+--- !u!114 &-7085228819766537934
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
+  m_Name: "B\xE2ton ferr\xE9"
+  m_EditorClassIdentifier: 
+  _nom: "B\xE2ton ferr\xE9"
+  _prix: 2
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _contact: 1
+  _distance: 0
+  _uneMain: 0
+  _deuxMains: 1
+  _typeDeDeDegats: 6
+  _nbDeDeDegats: 1
+  _modificateurDeDegats: 1
 --- !u!114 &-6993418910927854147
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -561,6 +584,22 @@ MonoBehaviour:
   _armure: 1
   _bouclier: 0
   _modificateurDArmure: 5
+--- !u!114 &-5219721156430513614
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Gamelle
+  m_EditorClassIdentifier: 
+  _nom: Gamelle(Clone)
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &-5204401804580749774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -644,7 +683,11 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &-3587171594706734722
+=======
+--- !u!114 &-3878769841737105669
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -654,9 +697,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+<<<<<<< Updated upstream
   m_Name: Gamelle
   m_EditorClassIdentifier: 
   _nom: Gamelle(Clone)
+=======
+  m_Name: Torche
+  m_EditorClassIdentifier: 
+  _nom: Torche
+>>>>>>> Stashed changes
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -795,6 +844,22 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+--- !u!114 &-2692439263317812709
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Outre
+  m_EditorClassIdentifier: 
+  _nom: Outre(Clone)
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &-2671313082853403587
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -912,6 +977,22 @@ MonoBehaviour:
   _typeDeDeDegats: 6
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
+--- !u!114 &-2267459187101761773
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Briquet en silex
+  m_EditorClassIdentifier: 
+  _nom: Briquet en silex
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &-2168064821581629475
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1174,7 +1255,11 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &-525614428018602226
+=======
+--- !u!114 &-596972512374064070
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1183,6 +1268,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
   m_Name: Grand bouclier
   m_EditorClassIdentifier: 
@@ -1193,6 +1279,15 @@ MonoBehaviour:
   _armure: 0
   _bouclier: 1
   _modificateurDArmure: 2
+=======
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Torche
+  m_EditorClassIdentifier: 
+  _nom: Torche(Clone)
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &-369805880287604246
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1235,6 +1330,22 @@ MonoBehaviour:
   _typeDeDeDegats: 6
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
+--- !u!114 &-25492694510891417
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Gamelle
+  m_EditorClassIdentifier: 
+  _nom: Gamelle
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1247,8 +1358,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf72a469fe07ce4449570a9a84c76bb1, type: 3}
   m_Name: MonPersonnage
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   _nom: f
   _nomJoueur: fd
+=======
+  _nom: Non
+  _nomJoueur: n
+>>>>>>> Stashed changes
   _description: 
   _sexe: 0
   _taille: 0
@@ -1256,44 +1372,74 @@ MonoBehaviour:
   _age: 0
   _caracteristiques:
   - _monType: 1
+<<<<<<< Updated upstream
     _valeur: 17
     _modificateur: 3
+=======
+    _valeur: 19
+    _modificateur: 4
+>>>>>>> Stashed changes
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 2
+<<<<<<< Updated upstream
     _valeur: 11
     _modificateur: 0
+=======
+    _valeur: 16
+    _modificateur: 3
+>>>>>>> Stashed changes
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 3
+<<<<<<< Updated upstream
     _valeur: 16
     _modificateur: 3
+=======
+    _valeur: 15
+    _modificateur: 2
+>>>>>>> Stashed changes
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 4
+<<<<<<< Updated upstream
     _valeur: 11
     _modificateur: 0
+=======
+    _valeur: 12
+    _modificateur: 1
+>>>>>>> Stashed changes
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 5
+<<<<<<< Updated upstream
     _valeur: 11
+=======
+    _valeur: 10
+>>>>>>> Stashed changes
     _modificateur: 0
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 6
+<<<<<<< Updated upstream
     _valeur: 11
     _modificateur: 0
+=======
+    _valeur: 4
+    _modificateur: -3
+>>>>>>> Stashed changes
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   _race: {fileID: 0}
   _profil: {fileID: 11400000, guid: 9189befad8fc00c4fafec221b8c6dc3d, type: 2}
   _deDePointDeVie: 10
+<<<<<<< Updated upstream
   _pointDeVie: 3
   _equipements:
   - {fileID: 8381588295313480202}
@@ -1304,13 +1450,31 @@ MonoBehaviour:
   - {fileID: 3185329212062627669}
   - {fileID: -4650093947352085628}
   - {fileID: -3587171594706734722}
+=======
+  _pointDeVie: 2
+  _equipements:
+  - {fileID: 7385226171474217038}
+  - {fileID: 6319013583163903421}
+  - {fileID: 8057738188871103292}
+  - {fileID: 833055455922306856}
+  - {fileID: 8506991677393043727}
+  - {fileID: -596972512374064070}
+  - {fileID: -2692439263317812709}
+  - {fileID: -5219721156430513614}
+>>>>>>> Stashed changes
   Voie1: {fileID: 11400000, guid: 020bf43f58e00704caa23beecbfcabd7, type: 2}
   Voie2: {fileID: 11400000, guid: 53d9bdbe6de328842a44f0d0419b07c9, type: 2}
   Voie3: {fileID: 11400000, guid: ed211b40f6be4dd468e05779cda3f354, type: 2}
   _bourse: 5
+<<<<<<< Updated upstream
   _pointDeDefense: 10
   _modAttaqueContact: 4
   _modAttaqueDistance: 1
+=======
+  _pointDeDefense: 13
+  _modAttaqueContact: 5
+  _modAttaqueDistance: 4
+>>>>>>> Stashed changes
   _modAttaqueMagique: 0
   _Magicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
   _Pretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
@@ -1479,7 +1643,11 @@ MonoBehaviour:
   _typeDeDeDegats: 8
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
+<<<<<<< Updated upstream
 --- !u!114 &873382068059377343
+=======
+--- !u!114 &833055455922306856
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1489,10 +1657,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+<<<<<<< Updated upstream
   m_Name: Potions de soins
   m_EditorClassIdentifier: 
   _nom: Potions de soins
   _prix: 10
+=======
+  m_Name: Briquet en silex
+  m_EditorClassIdentifier: 
+  _nom: Briquet en silex(Clone)
+  _prix: 1
+>>>>>>> Stashed changes
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
 --- !u!114 &874396138744527288
@@ -1904,6 +2079,22 @@ MonoBehaviour:
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
 --- !u!114 &2402166918658786601
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Couverture
+  m_EditorClassIdentifier: 
+  _nom: Couverture
+  _prix: 1
+  _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
+  _prefab: {fileID: 0}
+--- !u!114 &2434203630524379823
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2390,6 +2581,22 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+--- !u!114 &4595860728143365095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Potions de soins
+  m_EditorClassIdentifier: 
+  _nom: Potions de soins
+  _prix: 10
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &4619122717051991628
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2659,7 +2866,11 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
   _prefab: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &6328491243045382108
+=======
+--- !u!114 &6319013583163903421
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2668,6 +2879,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
   m_Name: Briquet en silex
   m_EditorClassIdentifier: 
@@ -2675,6 +2887,18 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+=======
+  m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
+  m_Name: Grand bouclier
+  m_EditorClassIdentifier: 
+  _nom: Grand bouclier(Clone)
+  _prix: 4
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _armure: 0
+  _bouclier: 1
+  _modificateurDArmure: 2
+>>>>>>> Stashed changes
 --- !u!114 &6455329644914265072
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2820,6 +3044,29 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
   _prefab: {fileID: 0}
+--- !u!114 &7385226171474217038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
+  m_Name: "Ep\xE9e b\xE2tarde (1 main)"
+  m_EditorClassIdentifier: 
+  _nom: "Ep\xE9e b\xE2tarde (1 main)(Clone)"
+  _prix: 9
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _contact: 1
+  _distance: 0
+  _uneMain: 1
+  _deuxMains: 0
+  _typeDeDeDegats: 8
+  _nbDeDeDegats: 1
+  _modificateurDeDegats: 1
 --- !u!114 &7387712167193352882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2988,6 +3235,25 @@ MonoBehaviour:
   _armure: 1
   _bouclier: 0
   _modificateurDArmure: 2
+--- !u!114 &8057738188871103292
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
+  m_Name: Cotte de mailles
+  m_EditorClassIdentifier: 
+  _nom: Cotte de mailles(Clone)
+  _prix: 20
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _armure: 1
+  _bouclier: 0
+  _modificateurDArmure: 5
 --- !u!114 &8086865574985028413
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3087,7 +3353,11 @@ MonoBehaviour:
   _prix: 0.1
   _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
   _prefab: {fileID: 0}
+<<<<<<< Updated upstream
 --- !u!114 &8381588295313480202
+=======
+--- !u!114 &8506991677393043727
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -3096,6 +3366,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
+<<<<<<< Updated upstream
   m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
   m_Name: "Ep\xE9e b\xE2tarde (1 main)"
   m_EditorClassIdentifier: 
@@ -3110,6 +3381,31 @@ MonoBehaviour:
   _typeDeDeDegats: 8
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
+=======
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Couverture
+  m_EditorClassIdentifier: 
+  _nom: Couverture(Clone)
+  _prix: 1
+  _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
+  _prefab: {fileID: 0}
+--- !u!114 &8858954185118092748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Outre
+  m_EditorClassIdentifier: 
+  _nom: Outre
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+>>>>>>> Stashed changes
 --- !u!114 &9004949675530759547
 MonoBehaviour:
   m_ObjectHideFlags: 0
