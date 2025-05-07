@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie de la magie universelle
+  m_Name: Combat
   m_EditorClassIdentifier: 
-  _nom: Voie de la magie universelle
+  _nom: Voie du combat
   _capacites:
-  - {fileID: 11400000, guid: e7633e9c7a853564bac238e0afd1dbcc, type: 2}
-  - {fileID: 11400000, guid: 96056dcb4e320974c80cce1e29f839da, type: 2}
-  - {fileID: 11400000, guid: 25f1ed6972c02154eaf9233fe58de33f, type: 2}
-  - {fileID: 11400000, guid: ac72892176052b346b736585de563565, type: 2}
+  - {fileID: 11400000, guid: bda342b7cef3e184badba468f23c585a, type: 2}
+  - {fileID: 11400000, guid: 50ecbc71c3630b34393bea1f85301037, type: 2}
+  - {fileID: 11400000, guid: 325fefdfb889a4c4481aecac112388c2, type: 2}
+  - {fileID: 11400000, guid: 38bf412021dbde841a37b96410da1977, type: 2}

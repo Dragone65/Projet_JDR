@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie du combat
+  m_Name: "Pri\xE8re"
   m_EditorClassIdentifier: 
-  _nom: Voie du combat
+  _nom: "Voie de la pri\xE8re"
   _capacites:
-  - {fileID: 11400000, guid: bda342b7cef3e184badba468f23c585a, type: 2}
-  - {fileID: 11400000, guid: 50ecbc71c3630b34393bea1f85301037, type: 2}
-  - {fileID: 11400000, guid: 325fefdfb889a4c4481aecac112388c2, type: 2}
-  - {fileID: 11400000, guid: 38bf412021dbde841a37b96410da1977, type: 2}
+  - {fileID: 11400000, guid: be7603a1ae0396143a7a866bc34064f4, type: 2}
+  - {fileID: 11400000, guid: f6037192b74a0b0498beca1e84715811, type: 2}
+  - {fileID: 11400000, guid: 737bd0a9e9c1d174bb7441929976288a, type: 2}
+  - {fileID: 11400000, guid: 7e29a2788354b6f4fb06e707fbfd09ce, type: 2}

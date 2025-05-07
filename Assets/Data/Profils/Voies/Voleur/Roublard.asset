@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: "Voie du d\xE9placement"
+  m_Name: Roublard
   m_EditorClassIdentifier: 
-  _nom: "Voie du d\xE9placement"
+  _nom: Voie du roublard
   _capacites:
-  - {fileID: 11400000, guid: cbaef2b4ff24ff342bdf95cc1bf624b1, type: 2}
-  - {fileID: 11400000, guid: e6aa8db54aa65494e825c71ce1a49f49, type: 2}
-  - {fileID: 11400000, guid: 67c76fa3624af024e8bc1b9b065413eb, type: 2}
-  - {fileID: 11400000, guid: 3d8fbbb74ed66254b986b9db23fcee28, type: 2}
+  - {fileID: 11400000, guid: ce974a30109c68940865603520bace09, type: 2}
+  - {fileID: 11400000, guid: 170d8866887ead842ade9cf8e103f3d5, type: 2}
+  - {fileID: 11400000, guid: 430d7ec388a026d4ab8ddd6f43d8c203, type: 2}
+  - {fileID: 11400000, guid: e04d9d6388765924bb9f2b8fe6ab35e4, type: 2}

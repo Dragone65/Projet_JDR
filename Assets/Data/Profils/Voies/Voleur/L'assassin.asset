@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie du roublard
+  m_Name: L'assassin
   m_EditorClassIdentifier: 
-  _nom: Voie du roublard
+  _nom: Voie de l'assassin
   _capacites:
-  - {fileID: 11400000, guid: ce974a30109c68940865603520bace09, type: 2}
-  - {fileID: 11400000, guid: 170d8866887ead842ade9cf8e103f3d5, type: 2}
-  - {fileID: 11400000, guid: 430d7ec388a026d4ab8ddd6f43d8c203, type: 2}
-  - {fileID: 11400000, guid: e04d9d6388765924bb9f2b8fe6ab35e4, type: 2}
+  - {fileID: 11400000, guid: 2a9481e414213144b8a5119cedac92c0, type: 2}
+  - {fileID: 11400000, guid: 789789fde23f2de4195db760a744a58f, type: 2}
+  - {fileID: 11400000, guid: 7d3ef47e43731d042befb33847e254c1, type: 2}
+  - {fileID: 11400000, guid: 5450e2e19c272644b87909aaa91e73cd, type: 2}

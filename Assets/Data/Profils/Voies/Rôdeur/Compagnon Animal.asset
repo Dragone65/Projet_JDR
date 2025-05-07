@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie de la magie protectrice
+  m_Name: Compagnon Animal
   m_EditorClassIdentifier: 
-  _nom: Voie de la magie protectrice
+  _nom: Voie du compagnon animal
   _capacites:
-  - {fileID: 11400000, guid: 3f6fd40226cdd834ca5ca61ee305431a, type: 2}
-  - {fileID: 11400000, guid: dc6b66917454cd043861ee346449b0e2, type: 2}
-  - {fileID: 11400000, guid: 688ee660e922d4a43afaceffd0a3e875, type: 2}
-  - {fileID: 11400000, guid: 008987568aca2244aa824ea162c013f8, type: 2}
+  - {fileID: 11400000, guid: 20e6381fff979414db4042d172951376, type: 2}
+  - {fileID: 11400000, guid: c2cf4cf0eafdcf24dad3fe2b807f990d, type: 2}
+  - {fileID: 11400000, guid: 744b27973b661e947bb0a8e45ef859ca, type: 2}
+  - {fileID: 11400000, guid: b5d2487237381cb428aa6cc331b5d335, type: 2}

@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie de l'archer
+  m_Name: "D\xE9placement"
   m_EditorClassIdentifier: 
-  _nom: Voie de l'archer
+  _nom: "Voie du d\xE9placement"
   _capacites:
-  - {fileID: 11400000, guid: 1eeb7b286a76d1144b9531efea3ee342, type: 2}
-  - {fileID: 11400000, guid: 766ee630d3134d54cb2d1b66d509a4e5, type: 2}
-  - {fileID: 11400000, guid: 2669b1851a207a448ad383b7c8e16aec, type: 2}
-  - {fileID: 11400000, guid: dd67185a6b5c7fa4499ab0ce8bd04936, type: 2}
+  - {fileID: 11400000, guid: cbaef2b4ff24ff342bdf95cc1bf624b1, type: 2}
+  - {fileID: 11400000, guid: e6aa8db54aa65494e825c71ce1a49f49, type: 2}
+  - {fileID: 11400000, guid: 67c76fa3624af024e8bc1b9b065413eb, type: 2}
+  - {fileID: 11400000, guid: 3d8fbbb74ed66254b986b9db23fcee28, type: 2}

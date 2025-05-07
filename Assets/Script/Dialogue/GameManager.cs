@@ -33,4 +33,10 @@ public class GameManager : MonoBehaviour
         dialogueAPresenter = null;
         return d;
     }
+
+    public void QuitGame()
+    {
+        Debug.Log("Quit Game");
+        Application.Quit();
+    }
 }

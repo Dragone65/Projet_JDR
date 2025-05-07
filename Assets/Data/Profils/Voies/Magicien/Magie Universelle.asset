@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie du traqueur
+  m_Name: Magie Universelle
   m_EditorClassIdentifier: 
-  _nom: Voie du traqueur
+  _nom: Voie de la magie universelle
   _capacites:
-  - {fileID: 11400000, guid: 3422e39659e1d8547a589da067cfa71f, type: 2}
-  - {fileID: 11400000, guid: 923d0e218ef579a4dba4a152e6b33a1b, type: 2}
-  - {fileID: 11400000, guid: bc7bb2ca367c7ec48aef247018b7d1fb, type: 2}
-  - {fileID: 11400000, guid: dfb86ac584308e843bad48976d5f807a, type: 2}
+  - {fileID: 11400000, guid: e7633e9c7a853564bac238e0afd1dbcc, type: 2}
+  - {fileID: 11400000, guid: 96056dcb4e320974c80cce1e29f839da, type: 2}
+  - {fileID: 11400000, guid: 25f1ed6972c02154eaf9233fe58de33f, type: 2}
+  - {fileID: 11400000, guid: ac72892176052b346b736585de563565, type: 2}

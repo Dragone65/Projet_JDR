@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie de l'assassin
+  m_Name: L'archer
   m_EditorClassIdentifier: 
-  _nom: Voie de l'assassin
+  _nom: Voie de l'archer
   _capacites:
-  - {fileID: 11400000, guid: 2a9481e414213144b8a5119cedac92c0, type: 2}
-  - {fileID: 11400000, guid: 789789fde23f2de4195db760a744a58f, type: 2}
-  - {fileID: 11400000, guid: 7d3ef47e43731d042befb33847e254c1, type: 2}
-  - {fileID: 11400000, guid: 5450e2e19c272644b87909aaa91e73cd, type: 2}
+  - {fileID: 11400000, guid: 1eeb7b286a76d1144b9531efea3ee342, type: 2}
+  - {fileID: 11400000, guid: 766ee630d3134d54cb2d1b66d509a4e5, type: 2}
+  - {fileID: 11400000, guid: 2669b1851a207a448ad383b7c8e16aec, type: 2}
+  - {fileID: 11400000, guid: dd67185a6b5c7fa4499ab0ce8bd04936, type: 2}

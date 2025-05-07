@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie de la guerre sainte
+  m_Name: "R\xE9sistance"
   m_EditorClassIdentifier: 
-  _nom: Voie de la guerre sainte
+  _nom: "Voie de la r\xE9sistance"
   _capacites:
-  - {fileID: 11400000, guid: a01e71613cf8f974d8ca0efd0fd19c24, type: 2}
-  - {fileID: 11400000, guid: 71e35556ad5c2304892e3693b8eba89f, type: 2}
-  - {fileID: 11400000, guid: bbe57bfcfcdfc3c4caf33af5cc7bb1de, type: 2}
-  - {fileID: 11400000, guid: c171bd1cfd178c148b2f71ec8ab3ee40, type: 2}
+  - {fileID: 11400000, guid: d61cd7fbceb7dab4a9f420d1b27f70b2, type: 2}
+  - {fileID: 11400000, guid: 77d666b60eb34cf4bb01eb557a5bf2e2, type: 2}
+  - {fileID: 11400000, guid: 9d679d27d4f22504f8ca0b67da301031, type: 2}
+  - {fileID: 11400000, guid: 5bc59ead38a02c645a0befb356fa18a1, type: 2}

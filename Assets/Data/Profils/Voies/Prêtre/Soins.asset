@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 495fec7265f7432e87fe1e331200fb2c, type: 3}
-  m_Name: Voie du compagnon animal
+  m_Name: Soins
   m_EditorClassIdentifier: 
-  _nom: Voie du compagnon animal
+  _nom: Voie des soins
   _capacites:
-  - {fileID: 11400000, guid: 20e6381fff979414db4042d172951376, type: 2}
-  - {fileID: 11400000, guid: c2cf4cf0eafdcf24dad3fe2b807f990d, type: 2}
-  - {fileID: 11400000, guid: 744b27973b661e947bb0a8e45ef859ca, type: 2}
-  - {fileID: 11400000, guid: b5d2487237381cb428aa6cc331b5d335, type: 2}
+  - {fileID: 11400000, guid: cfa59df1716da074bb633fa9d21a2b5c, type: 2}
+  - {fileID: 11400000, guid: e199f0e211795a4439e956fe5d50f578, type: 2}
+  - {fileID: 11400000, guid: 897cbe4426b3d7443aa24210e5d2931b, type: 2}
+  - {fileID: 11400000, guid: 6e98dd06b94f1b04aa3517807b990a25, type: 2}
