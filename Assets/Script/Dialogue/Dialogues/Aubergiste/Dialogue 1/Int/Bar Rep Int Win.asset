@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66dc4013cb5352409411aa2f5bb6b5e, type: 3}
+  m_Name: Bar Rep Int Win
+  m_EditorClassIdentifier: 
+  textePNJ: 
+  options: []
+  reactions:
+  - raceCible: {fileID: 11400000, guid: 8836b43d0d14d30439f64cf3b995fd31, type: 2}
+    reactionRace: {fileID: 11400000, guid: 370b526155474ba4b8f53852aaea68f3, type: 2}
+  - raceCible: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
+    reactionRace: {fileID: 11400000, guid: 370b526155474ba4b8f53852aaea68f3, type: 2}
+  - raceCible: {fileID: 11400000, guid: 0d86d6ac5d53340458a7b1b66ffc62d7, type: 2}
+    reactionRace: {fileID: 11400000, guid: e2c42adc6944de348ba415b82898eb4e, type: 2}
+  - raceCible: {fileID: 11400000, guid: 301f5671b538872409648ca58eb90373, type: 2}
+    reactionRace: {fileID: 11400000, guid: 5d3a899a099bdd642abaeac7eaa95f99, type: 2}

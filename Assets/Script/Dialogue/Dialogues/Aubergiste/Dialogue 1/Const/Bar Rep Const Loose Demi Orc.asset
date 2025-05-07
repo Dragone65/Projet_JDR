@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f66dc4013cb5352409411aa2f5bb6b5e, type: 3}
+  m_Name: Bar Rep Const Loose Demi Orc
+  m_EditorClassIdentifier: 
+  textePNJ: "Ha ! Je croyais que vous \xE9tiez r\xE9sistants, vous autres !\n(vous
+    perdez 2 de Dexterit\xE9)"
+  options: []
+  reactions: []
