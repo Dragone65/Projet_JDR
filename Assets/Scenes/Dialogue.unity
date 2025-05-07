@@ -160,6 +160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: 1d5a1f2352b594840aa5ae7abf52d2cb, type: 2}
+  joueurPersonnage: {fileID: 11400000, guid: e460ffbfb934a5a458ce37a35ce365f3, type: 2}
 --- !u!1 &202609076
 GameObject:
   m_ObjectHideFlags: 0
@@ -193,6 +194,7 @@ MonoBehaviour:
   choixContainer: {fileID: 572375920}
   choixPrefab: {fileID: 8473197140560971869, guid: b03f061435aec094ba5fe453e4b285ef, type: 3}
   dialoguePanel: {fileID: 1259328865}
+  joueurPersonnage: {fileID: 0}
 --- !u!4 &202609078
 Transform:
   m_ObjectHideFlags: 0
@@ -2887,6 +2889,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue: {fileID: 11400000, guid: ee7c23a5c2ca4dd4e90b6e90ffa961ff, type: 2}
+  joueurPersonnage: {fileID: 11400000, guid: e460ffbfb934a5a458ce37a35ce365f3, type: 2}
 --- !u!136 &1968664688
 CapsuleCollider:
   m_ObjectHideFlags: 0
