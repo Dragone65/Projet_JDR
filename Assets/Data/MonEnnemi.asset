@@ -64,8 +64,8 @@ MonoBehaviour:
         m_Calls: []
   _race: {fileID: 11400000, guid: 8836b43d0d14d30439f64cf3b995fd31, type: 2}
   _profil: {fileID: 11400000, guid: 9189befad8fc00c4fafec221b8c6dc3d, type: 2}
-  _deDePointDeVie: 12
-  _pointDeVie: 15
+  _deDePointDeVie: 10
+  _pointDeVie: 13
   _equipements:
   - {fileID: 11400000, guid: b264c56531a565a4b9e110b291cc3de2, type: 2}
   - {fileID: 11400000, guid: f2bf8b898f3930c4abca55e6b4d20fee, type: 2}
@@ -81,3 +81,5 @@ MonoBehaviour:
   _Magicien: {fileID: 0}
   _Pretre: {fileID: 0}
   _complete: 1
+  armes: []
+  protections: []

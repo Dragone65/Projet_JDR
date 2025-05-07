@@ -281,7 +281,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81ca6ba2247b9694e9b2e7c70df45ca2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueAPresenter: {fileID: 11400000, guid: 333ce2a8ee92a8e48b990924082fd781, type: 2}
+  dialogueAPresenter: {fileID: 11400000, guid: 55ecc04c3e7486344899797696788fea, type: 2}
   playerStats: {fileID: 11400000, guid: e460ffbfb934a5a458ce37a35ce365f3, type: 2}
 --- !u!4 &321012303
 Transform:

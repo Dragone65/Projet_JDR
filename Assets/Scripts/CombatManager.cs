@@ -107,7 +107,7 @@ public class CombatManager : MonoBehaviour
             }
 
             
-            if (playerHP <= 0)
+            if (enemyHP <= 0)
             {
                 actionText.text += "\nVous avez été vaincu... ";
                 EndBattle();
