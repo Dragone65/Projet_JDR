@@ -608,10 +608,29 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
   m_Name: Outre
   m_EditorClassIdentifier: 
-  _nom: Outre(Clone)
+  _nom: Outre
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+--- !u!114 &-4152898029211940199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
+  m_Name: Chemise de mailles
+  m_EditorClassIdentifier: 
+  _nom: Chemise de mailles(Clone)
+  _prix: 15
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _armure: 1
+  _bouclier: 0
+  _modificateurDArmure: 4
 --- !u!114 &-3946482258171234316
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -656,7 +675,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
   m_Name: Gamelle
   m_EditorClassIdentifier: 
-  _nom: Gamelle(Clone)
+  _nom: Gamelle
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -727,7 +746,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
   m_Name: Couverture
   m_EditorClassIdentifier: 
-  _nom: Couverture(Clone)
+  _nom: Couverture
   _prix: 1
   _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
   _prefab: {fileID: 0}
@@ -1247,8 +1266,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bf72a469fe07ce4449570a9a84c76bb1, type: 3}
   m_Name: MonPersonnage
   m_EditorClassIdentifier: 
-  _nom: f
-  _nomJoueur: fd
+  _nom: oui
+  _nomJoueur: oui
   _description: 
   _sexe: 0
   _taille: 0
@@ -1256,61 +1275,62 @@ MonoBehaviour:
   _age: 0
   _caracteristiques:
   - _monType: 1
+    _valeur: 13
+    _modificateur: 1
+    OnValeurChange:
+      m_PersistentCalls:
+        m_Calls: []
+  - _monType: 2
     _valeur: 17
     _modificateur: 3
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
-  - _monType: 2
-    _valeur: 11
-    _modificateur: 0
-    OnValeurChange:
-      m_PersistentCalls:
-        m_Calls: []
   - _monType: 3
-    _valeur: 16
-    _modificateur: 3
+    _valeur: 14
+    _modificateur: 2
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 4
-    _valeur: 11
-    _modificateur: 0
+    _valeur: 13
+    _modificateur: 1
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 5
-    _valeur: 11
-    _modificateur: 0
+    _valeur: 9
+    _modificateur: -1
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
   - _monType: 6
-    _valeur: 11
-    _modificateur: 0
+    _valeur: 7
+    _modificateur: -2
     OnValeurChange:
       m_PersistentCalls:
         m_Calls: []
-  _race: {fileID: 0}
-  _profil: {fileID: 11400000, guid: 9189befad8fc00c4fafec221b8c6dc3d, type: 2}
-  _deDePointDeVie: 10
-  _pointDeVie: 3
+  _race: {fileID: 11400000, guid: bb70fadd6e6382b47b03c3e8e747a6f0, type: 2}
+  _profil: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
+  _deDePointDeVie: 8
+  _pointDeVie: 2
   _equipements:
-  - {fileID: 8381588295313480202}
-  - {fileID: 6103556936459263655}
-  - {fileID: 2733090456029587648}
-  - {fileID: 5154319266704451630}
-  - {fileID: -3175793100578573575}
-  - {fileID: 3185329212062627669}
-  - {fileID: -4650093947352085628}
-  - {fileID: -3587171594706734722}
-  Voie1: {fileID: 11400000, guid: 020bf43f58e00704caa23beecbfcabd7, type: 2}
-  Voie2: {fileID: 11400000, guid: 53d9bdbe6de328842a44f0d0419b07c9, type: 2}
-  Voie3: {fileID: 11400000, guid: ed211b40f6be4dd468e05779cda3f354, type: 2}
+  - {fileID: 3589237837761926280}
+  - {fileID: 7724121574996749296}
+  - {fileID: 3279671700392985284}
+  - {fileID: -4152898029211940199}
+  - {fileID: 3224620388931116166}
+  - {fileID: 6508170288688664669}
+  - {fileID: 7153610944401176656}
+  - {fileID: 6835102647678212422}
+  - {fileID: 2325947769376398203}
+  Voie1: {fileID: 11400000, guid: 2e6d2540aa109014b8e072d77d690a4d, type: 2}
+  Voie2: {fileID: 11400000, guid: 4a3f3c387a44ce943bc96a1094d7bd09, type: 2}
+  Voie3: {fileID: 11400000, guid: be034c8423dd1434ab278ab9e10d0c25, type: 2}
   _bourse: 5
-  _pointDeDefense: 10
-  _modAttaqueContact: 4
-  _modAttaqueDistance: 1
+  _pointDeDefense: 13
+  _modAttaqueContact: 2
+  _modAttaqueDistance: 4
   _modAttaqueMagique: 0
   _Magicien: {fileID: 11400000, guid: baee7f2a3091fa345919478a2ee43052, type: 2}
   _Pretre: {fileID: 11400000, guid: 2192f8f70cb9533419b58e0403d27947, type: 2}
@@ -1903,6 +1923,22 @@ MonoBehaviour:
   _typeDeDeDegats: 6
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
+--- !u!114 &2325947769376398203
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Torche
+  m_EditorClassIdentifier: 
+  _nom: Torche(Clone)
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &2402166918658786601
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2030,7 +2066,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
   m_Name: Cotte de mailles
   m_EditorClassIdentifier: 
-  _nom: Cotte de mailles(Clone)
+  _nom: Cotte de mailles
   _prix: 20
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -2136,7 +2172,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
   m_Name: Torche
   m_EditorClassIdentifier: 
-  _nom: Torche(Clone)
+  _nom: Torche
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -2159,6 +2195,38 @@ MonoBehaviour:
   _armure: 0
   _bouclier: 1
   _modificateurDArmure: 2
+--- !u!114 &3224620388931116166
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Couverture
+  m_EditorClassIdentifier: 
+  _nom: Couverture(Clone)
+  _prix: 1
+  _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
+  _prefab: {fileID: 0}
+--- !u!114 &3279671700392985284
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Trousse de soins
+  m_EditorClassIdentifier: 
+  _nom: Trousse de soins(Clone)
+  _prix: 3
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &3490845043862298990
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2199,6 +2267,29 @@ MonoBehaviour:
   _uneMain: 1
   _deuxMains: 0
   _typeDeDeDegats: 8
+  _nbDeDeDegats: 1
+  _modificateurDeDegats: 1
+--- !u!114 &3589237837761926280
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
+  m_Name: Marteau de guerre
+  m_EditorClassIdentifier: 
+  _nom: Marteau de guerre(Clone)
+  _prix: 4
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _contact: 1
+  _distance: 0
+  _uneMain: 0
+  _deuxMains: 1
+  _typeDeDeDegats: 6
   _nbDeDeDegats: 1
   _modificateurDeDegats: 1
 --- !u!114 &3688654427494853292
@@ -2450,7 +2541,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
   m_Name: Briquet en silex
   m_EditorClassIdentifier: 
-  _nom: Briquet en silex(Clone)
+  _nom: Briquet en silex
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -2581,7 +2672,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
   m_Name: Grand bouclier
   m_EditorClassIdentifier: 
-  _nom: Grand bouclier(Clone)
+  _nom: Grand bouclier
   _prix: 4
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -2710,6 +2801,22 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+--- !u!114 &6508170288688664669
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Gamelle
+  m_EditorClassIdentifier: 
+  _nom: Gamelle(Clone)
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &6527452471539389689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2739,6 +2846,22 @@ MonoBehaviour:
   m_Name: Torche
   m_EditorClassIdentifier: 
   _nom: Torche
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+--- !u!114 &6835102647678212422
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Briquet en silex
+  m_EditorClassIdentifier: 
+  _nom: Briquet en silex(Clone)
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
@@ -2820,6 +2943,22 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 21300000, guid: 836cb5c85f82f4a44805492a6f5f1baa, type: 3}
   _prefab: {fileID: 0}
+--- !u!114 &7153610944401176656
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fee8d76ece824c20a8016b2a93d80606, type: 3}
+  m_Name: Outre
+  m_EditorClassIdentifier: 
+  _nom: Outre(Clone)
+  _prix: 1
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
 --- !u!114 &7387712167193352882
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2891,6 +3030,25 @@ MonoBehaviour:
   _prix: 1
   _icon: {fileID: 0}
   _prefab: {fileID: 0}
+--- !u!114 &7724121574996749296
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8df18b8d16b643b3866f60c3f82e6ff6, type: 3}
+  m_Name: Petit bouclier
+  m_EditorClassIdentifier: 
+  _nom: Petit bouclier(Clone)
+  _prix: 2
+  _icon: {fileID: 0}
+  _prefab: {fileID: 0}
+  _armure: 0
+  _bouclier: 1
+  _modificateurDArmure: 2
 --- !u!114 &7750209182778706571
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3099,7 +3257,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 36ea7bbd89f747eb9b935ded41c01cc0, type: 3}
   m_Name: "Ep\xE9e b\xE2tarde (1 main)"
   m_EditorClassIdentifier: 
-  _nom: "Ep\xE9e b\xE2tarde (1 main)(Clone)"
+  _nom: "Ep\xE9e b\xE2tarde (1 main)"
   _prix: 9
   _icon: {fileID: 0}
   _prefab: {fileID: 0}

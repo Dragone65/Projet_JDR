@@ -101,7 +101,7 @@ namespace Koboct.Data
         {
             return GetCaracteristique(type).Valeur;
         }
-
+  
         public int GetCaracteristiqueModificateur(TypeCaracteristique type)
         {
             return GetCaracteristique(type).Modificateur;
@@ -168,10 +168,7 @@ namespace Koboct.Data
             Equipements.Clear();
         }
 
-        internal int GetCaracteristiqueModificateur(TypeCharacteristique testCaracteristique)
-        {
-            throw new NotImplementedException();
-        }
+       
     }
 
     public enum Genre

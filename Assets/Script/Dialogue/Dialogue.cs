@@ -16,7 +16,7 @@ public class Dialogue : ScriptableObject
 public class DialogueOption
 {
     public string texteJoueur;
-    public TypeCharacteristique testCaracteristique;
+    public TypeCaracteristique testCaracteristique;
     public int difficulteTest;
     public int seuilMoyen; 
     public Dialogue reponseReussite;

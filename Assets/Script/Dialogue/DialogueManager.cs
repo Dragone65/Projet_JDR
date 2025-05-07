@@ -87,7 +87,7 @@ public class DialogueManager : MonoBehaviour
 
     void FaireChoix(DialogueOption option)
     {
-        if (option.testCaracteristique != TypeCharacteristique.Aucune)
+        if (option.testCaracteristique != TypeCaracteristique.Aucune)
         {
 
             int jet = UnityEngine.Random.Range(1, 21) + joueurPersonnage.GetCaracteristiqueModificateur(option.testCaracteristique);
